@@ -1,7 +1,6 @@
 <template>
   <b-container fluid style="padding: 0">
     <custom-slider />
-    <h2 class="block-label">Product List</h2>
     <product-list />
   </b-container>
 </template>

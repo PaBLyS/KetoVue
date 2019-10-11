@@ -1,22 +1,19 @@
 export const state = ()  => ({
                                items: [
                                  {
-                                   label: 'Yeah Keto',
-                                   prise: 80,
-                                   sale: 69,
-                                   description: '1'
+                                   label: 'Yogurt Skin Under-Eya Cream',
+                                   prise: 69,
+                                   description: 'lorem ipsum'
                                  },
                                  {
-                                   label: 'Yeah Keto mini',
-                                   prise: 60,
-                                   sale: 39,
-                                   description: '2'
+                                   label: 'Yogurt Skin Lifting Cream',
+                                   prise: 49,
+                                   description: 'lorem ipsum'
                                  },
                                  {
-                                   label: 'Yeah Keto max',
-                                   prise: 90,
-                                   sale: 79,
-                                   description: '3'
+                                   label: 'Yogurt Skin Aging Cream',
+                                   prise: 59,
+                                   description: 'lorem ipsum'
                                  }],
                                cart: [
                                  {

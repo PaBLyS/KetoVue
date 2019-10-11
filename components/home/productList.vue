@@ -1,22 +1,18 @@
 <template>
-  <div class="container">
-    <div v-for="(item, index) in items"
-         :key="index">
-      <b-card
-        @click="goToItem(index)"
-        :title="item.label"
-        :img-src="'items/'+ index + '/1.jpg'"
-        img-center
-        style="margin: 25px; border: none; cursor: pointer"
-      >
-        <div class="text-container">
-          <b-card-text class="text-prod">
-            Price: <span class="prise-sale">${{ item.prise }}</span>  ${{ item.sale }}
-          </b-card-text>
+  <section>
+    <h2 class="block-label">TRENDING NOW</h2>
+    <div class="container">
+      <div v-for="(item, index) in items"
+           :key="index"
+           class="cards">
+        <div class="img__wrap">
+          <img :src="'items/'+ index + '/1.png'">
         </div>
-      </b-card>
+        <div class="name-product">{{ item.label }}</div>
+        <div class="price-product">${{ item.prise }}.00</div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -37,39 +33,46 @@
 </script>
 
 <style scoped>
+  section{
+    padding: 30px 0;
+    text-align: center;
+    background-color: #f7cac9;
+  }
+
+  .block-label {
+    color: #232323;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
   .container {
     display: flex;
     justify-content: space-around;
+    align-items: stretch;
     flex-wrap: wrap;
   }
-  .card img {
-    height: auto;
-    width: 250px;
-    margin: auto;
-  }
-  .text-container {
+  .cards {
+    width: 33%;
+    background: transparent;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
   }
-  .text-prod {
-    font-size: 28px;
-
-  }
-  .prise-sale {
-     font-weight: normal;
-     position: relative;
-   }
-  .prise-sale:after{
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    color: red;
+  .img__wrap {
     width: 100%;
-    height: 0;
-    border-bottom: 3px solid red;
-    transform: rotate(-20deg);
+    padding: 50px;
+  }
+  .img__wrap img {
+    width: 100%;
+  }
+
+  .name-product {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .price-product {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 15px 0;
   }
 </style>
