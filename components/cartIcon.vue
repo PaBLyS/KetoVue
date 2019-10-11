@@ -1,25 +1,18 @@
 <template>
   <div @click="goToCart()"
        class="shop">
-    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-         width="35px" height="35px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
-    <g>
+    <svg version="1.1" class="shop-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
       <g>
-        <g>
-          <path d="M15.733,20.125c1.104,0,2-0.896,2-2v-7.8C17.733,6.838,20.57,4,24.058,4c3.487,0,6.325,2.838,6.325,6.325v7.8
-            c0,1.104,0.896,2,2,2c1.104,0,2-0.896,2-2v-7.8C34.383,4.632,29.751,0,24.058,0c-5.692,0-10.324,4.632-10.324,10.325v7.8
-            C13.733,19.229,14.629,20.125,15.733,20.125z"/>
-          <path d="M47,15.631H36.383v2.494c0,2.206-1.794,4-4,4c-2.205,0-4-1.794-4-4v-2.494h-8.649v2.494c0,2.206-1.794,4-4,4
-            s-4-1.794-4-4v-2.494H1c-0.552,0-0.893,0.435-0.762,0.971L7.235,45.1C7.658,46.702,9.343,48,11,48h26
-            c1.658,0,3.342-1.299,3.767-2.9l6.996-28.498C47.893,16.065,47.553,15.631,47,15.631z"/>
-        </g>
+          <path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+              c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+              C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+              H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+              c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
       </g>
-    </g>
     </svg>
-    <div class="index"
-         v-if="indexItem > 0">
-      {{ indexItem }}
-    </div>
+    <span class="shop-text">Shopping Cart</span>
+    <span class="shop-index">{{ indexItem }}</span>
   </div>
 </template>
 
@@ -47,22 +40,25 @@
 
 <style scoped>
   .shop {
-    position: relative;
-    cursor: pointer;
-  }
-  .index {
-    display: flex;
+    display: inline-block;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 18px;
-    width: 18px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #064273;
+  }
+  .shop-icon {
+      height: 25px;
+  }
+  .shop-text {
+    display: inline-block;
+    margin: 0 5px;
+    color: #323232;
+    font-size: 14px;
+  }
+  .shop-index {
+    display: inline-block;
+    text-align: center;
+    height: 25px;
+    width: 25px;
     border-radius: 100%;
+    background-color: #ffe5e5;
   }
 </style>

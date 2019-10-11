@@ -1,0 +1,41 @@
+<template>
+    <b-container fluid class="header-sticky">
+        <b-container>
+            <b-row>
+                <NuxtLink to="/">HOME</NuxtLink>
+                <NuxtLink to="/">CATALOG</NuxtLink>
+                <NuxtLink to="/about-us">ABOUT US</NuxtLink>
+            </b-row>
+        </b-container>
+    </b-container>
+</template>
+
+<script>
+    export default {
+        name: "customHeaderSticky"
+    }
+</script>
+
+<style scoped>
+    .header-sticky {
+        height: 45px;
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        background: #232323;
+        z-index: 999;
+    }
+
+    .header-sticky a {
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        padding: 0 50px 0 0;
+    }
+    
+    .header-sticky a:hover{
+        text-decoration: none;
+    }
+</style>
