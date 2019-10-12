@@ -43,6 +43,7 @@
     display: inline-block;
     justify-content: flex-end;
     align-items: center;
+    cursor: pointer;
   }
   .shop-icon {
       height: 25px;

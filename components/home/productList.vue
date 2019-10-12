@@ -1,6 +1,5 @@
 <template>
   <section>
-    <h2 class="block-label">TRENDING NOW</h2>
     <div class="container">
       <div v-for="(item, index) in items"
            :key="index"
@@ -39,12 +38,6 @@
     background-color: #f7cac9;
   }
 
-  .block-label {
-    color: #232323;
-    font-size: 20px;
-    font-weight: 700;
-  }
-  
   .container {
     display: flex;
     justify-content: space-around;
@@ -60,7 +53,7 @@
   }
   .img__wrap {
     width: 100%;
-    padding: 50px;
+    padding: 0 50px 50px;
   }
   .img__wrap img {
     width: 100%;
