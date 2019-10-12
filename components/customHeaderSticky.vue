@@ -2,9 +2,9 @@
     <b-container fluid class="header-sticky">
         <b-container>
             <b-row>
-                <NuxtLink to="/">HOME</NuxtLink>
-                <NuxtLink to="/">CATALOG</NuxtLink>
-                <NuxtLink to="/about-us">ABOUT US</NuxtLink>
+                <NuxtLink to="/" class="underline">HOME</NuxtLink>
+                <NuxtLink to="/" class="underline">CATALOG</NuxtLink>
+                <NuxtLink to="/about-us" class="underline">ABOUT US</NuxtLink>
             </b-row>
         </b-container>
     </b-container>
@@ -32,9 +32,9 @@
         font-size: 14px;
         font-weight: bold;
         letter-spacing: 2px;
-        padding: 0 50px 0 0;
+        margin: 0 50px 0 0;
     }
-    
+
     .header-sticky a:hover{
         text-decoration: none;
     }

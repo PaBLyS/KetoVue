@@ -4,16 +4,16 @@
       <b-container class="footer-links">
         <ul>
           <li>
-            <nuxt-link to="/" class="footer-link">Customer Support</nuxt-link>
+            <nuxt-link to="/" class="footer-link underline">Customer Support</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/" class="footer-link">Ingredients</nuxt-link>
+            <nuxt-link to="/" class="footer-link underline">Ingredients</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/" class="footer-link">Privacy Policy</nuxt-link>
+            <nuxt-link to="/" class="footer-link underline">Privacy Policy</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/" class="footer-link">Terms and Conditions</nuxt-link>
+            <nuxt-link to="/" class="footer-link underline">Terms and Conditions</nuxt-link>
           </li>
         </ul>
       </b-container>
@@ -51,6 +51,7 @@
     font-size: 14px;
     line-height: 24px;
     padding: 3px 0;
+    text-decoration: none;
   }
 
   .footer-link:hover {
