@@ -2,13 +2,13 @@
     <section class="block">
         <b-container>
             <b-breadcrumb :items="items"></b-breadcrumb>
-            <h2 class="label">Ingridients</h2>
+            <h2 class="label">Ingredients</h2>
             <div v-for="(item, index) in itemsIngridient"
                  :key="index"
                  class="wrap-ingridient"
             >
                 <div class="sub-label">{{ item.label }}</div>
-                <img :src="'/ingridients/' + index + '.jpg'">
+                <img :src="'/ingredients/' + index + '.jpg'">
                 <p class="text">FOOD AND DRUG ADMINISTRATION (FDA) DISCLOSURE This product is not for use by or sale to
                     persons under the age of 18. This product should be used only as directed on the label. It should
                     not be used if you are pregnant or nursing. Consult with a physician before use if you have a
@@ -28,7 +28,7 @@
 
 <script>
     export default {
-        name: "ingridients",
+        name: "ingredients",
         data() {
             return {
                 items: [
@@ -37,8 +37,8 @@
                         href: '/'
                     },
                     {
-                        text: 'Ingridients',
-                        href: '/ingridients'
+                        text: 'Ingredients',
+                        href: '/ingredients'
                     }
                 ]
             }

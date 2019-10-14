@@ -7,7 +7,7 @@
                         <nuxt-link to="/customer-support" class="footer-link underline">Customer Support</nuxt-link>
                     </li>
                     <li>
-                        <nuxt-link to="/ingridients" class="footer-link underline">Ingredients</nuxt-link>
+                        <nuxt-link to="/ingredients" class="footer-link underline">Ingredients</nuxt-link>
                     </li>
                     <li>
                         <nuxt-link to="/" class="footer-link underline">Privacy Policy</nuxt-link>
