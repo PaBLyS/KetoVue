@@ -96,4 +96,16 @@
     font-weight: 600;
     margin: 15px 0;
   }
+  .product-button {
+    padding: 8px 15px;
+    color: #2e2c2c;
+    background: #fff;
+    border: 1px solid #232323;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .product-button:hover{
+    color: #fff;
+    background: #232323;
+  }
 </style>
