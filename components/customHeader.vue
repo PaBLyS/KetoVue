@@ -7,7 +7,7 @@
             <b-row align-v="end">
                 <b-col>
                     <div class="header-logo__wrap">
-                        <img class="header-logo" src="logo.png">
+                        <img class="header-logo" src="/logo.png">
                     </div>
                 </b-col>
                 <b-col class="header-cart">
