@@ -2,7 +2,7 @@
     <section class="block">
         <b-container>
             <b-breadcrumb :items="items"></b-breadcrumb>
-            <h2>Products</h2>
+            <h2 class="label">Products</h2>
         </b-container>
         <product-list/>
     </section>
@@ -44,6 +44,7 @@
 
     .breadcrumb {
         background: transparent;
+        padding-left: 0;
     }
 
     .breadcrumb a,
@@ -51,5 +52,10 @@
         font-size: 14px;
         color: #232323;
         text-decoration: none;
+    }
+    
+    .label {
+        text-align: left;
+        text-transform: uppercase;
     }
 </style>
