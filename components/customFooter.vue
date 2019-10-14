@@ -10,7 +10,7 @@
                         <nuxt-link to="/ingredients" class="footer-link underline">Ingredients</nuxt-link>
                     </li>
                     <li>
-                        <nuxt-link to="/" class="footer-link underline">Privacy Policy</nuxt-link>
+                        <nuxt-link to="/privacy-policy" class="footer-link underline">Privacy Policy</nuxt-link>
                     </li>
                     <li>
                         <nuxt-link to="/" class="footer-link underline">Terms and Conditions</nuxt-link>
@@ -26,7 +26,7 @@
                 prescription medications. All trademarks and copyrights are the property of their respective owners and
                 are not affiliated with nor do they endorse. These statements have not been evaluated by the FDA. This
                 product is not intended to diagnose, treat, cure or prevent any disease. Individual results will vary.
-                By using this site you agree to follow the Privacy Policy and all Terms & Conditions printed on this
+                By using this site you agree to follow the <nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link> and all Terms & Conditions printed on this
                 site. Void Where Prohibited By Law.</p>
             <div class="payment">
                 <img src="/visa.png" alt="">
@@ -78,6 +78,10 @@
     .footer-bottom {
         font-size: 14px;
         padding: 25px 0 65px;
+    }
+
+    .footer-bottom a{
+        color: #969696;
     }
 
     .payment img {
