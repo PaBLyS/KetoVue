@@ -40,7 +40,7 @@
   section{
     padding: 30px 0;
     text-align: center;
-    background-color: #f7cac9;
+    background-color: transparent;
   }
 
   .container {

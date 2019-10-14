@@ -2,7 +2,7 @@
   <b-container fluid style="padding: 0">
     <custom-slider />
     <h2 class="block-label">TRENDING NOW</h2>
-    <product-list />
+    <product-list class="prod-list"/>
   </b-container>
 </template>
 
@@ -31,5 +31,9 @@
     background-color: #f7cac9;
     margin: 0;
     padding: 25px 0;
+  }
+  
+  .prod-list {
+    background: #f7cac9;
   }
 </style>
