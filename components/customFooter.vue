@@ -4,7 +4,7 @@
             <b-container class="footer-links">
                 <ul>
                     <li>
-                        <nuxt-link to="/" class="footer-link underline">Customer Support</nuxt-link>
+                        <nuxt-link to="/customer-support" class="footer-link underline">Customer Support</nuxt-link>
                     </li>
                     <li>
                         <nuxt-link to="/" class="footer-link underline">Ingredients</nuxt-link>
