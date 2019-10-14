@@ -4,6 +4,7 @@
     <custom-header-sticky />
     <nuxt />
     <custom-footer />
+    <custom-cookie-setting />
   </div>
 </template>
 
@@ -11,9 +12,10 @@
   import customHeader from "../components/customHeader";
   import customHeaderSticky from "../components/customHeaderSticky";
   import customFooter from "../components/customFooter";
+  import customCookieSetting from "../components/customCookieSetting";
 
   export default {
-      components: {customFooter, customHeader, customHeaderSticky}
+      components: {customFooter, customHeader, customHeaderSticky, customCookieSetting}
   }
 
 </script>
