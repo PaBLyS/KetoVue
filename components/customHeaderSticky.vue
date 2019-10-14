@@ -3,7 +3,7 @@
         <b-container>
             <b-row>
                 <NuxtLink to="/" class="underline">HOME</NuxtLink>
-                <NuxtLink to="/" class="underline">CATALOG</NuxtLink>
+                <NuxtLink to="/catalog" class="underline">CATALOG</NuxtLink>
                 <NuxtLink to="/about-us" class="underline">ABOUT US</NuxtLink>
             </b-row>
         </b-container>
