@@ -45,8 +45,9 @@
     .breadcrumb {
         background: transparent;
     }
+
     .breadcrumb a,
-    .breadcrumb span{
+    .breadcrumb span {
         font-size: 14px;
         color: #232323;
         text-decoration: none;

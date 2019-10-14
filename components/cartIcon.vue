@@ -1,8 +1,9 @@
 <template>
-  <div @click="goToCart()"
-       class="shop">
-    <svg version="1.1" class="shop-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-         viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+    <div @click="goToCart()"
+         class="shop">
+        <svg version="1.1" class="shop-icon" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
       <g>
           <path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
               c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
@@ -11,9 +12,9 @@
               c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
       </g>
     </svg>
-    <span class="shop-text">Shopping Cart</span>
-    <span class="shop-index">{{ indexItem }}</span>
-  </div>
+        <span class="shop-text">Shopping Cart</span>
+        <span class="shop-index">{{ indexItem }}</span>
+    </div>
 </template>
 
 <script>
@@ -32,34 +33,37 @@
         methods: {
             goToCart() {
                 this.transition = 'slide';
-                this.$router.push({ path: '/cart' });
+                this.$router.push({path: '/cart'});
             }
         }
     }
 </script>
 
 <style scoped>
-  .shop {
-    display: inline-block;
-    justify-content: flex-end;
-    align-items: center;
-    cursor: pointer;
-  }
-  .shop-icon {
-      height: 25px;
-  }
-  .shop-text {
-    display: inline-block;
-    margin: 0 5px;
-    color: #323232;
-    font-size: 14px;
-  }
-  .shop-index {
-    display: inline-block;
-    text-align: center;
-    height: 25px;
-    width: 25px;
-    border-radius: 100%;
-    background-color: #ffe5e5;
-  }
+    .shop {
+        display: inline-block;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .shop-icon {
+        height: 25px;
+    }
+
+    .shop-text {
+        display: inline-block;
+        margin: 0 5px;
+        color: #323232;
+        font-size: 14px;
+    }
+
+    .shop-index {
+        display: inline-block;
+        text-align: center;
+        height: 25px;
+        width: 25px;
+        border-radius: 100%;
+        background-color: #ffe5e5;
+    }
 </style>

@@ -13,7 +13,7 @@
                 <b-col class="header-cart">
                     <div class="header-cart__wrap">
                         <div class="header-cart__text">FREE SHIPPING ON ALL ORDERS. NO MINIMUM PURCHASE</div>
-                        <cart-icon />
+                        <cart-icon/>
                     </div>
                 </b-col>
             </b-row>

@@ -1,12 +1,12 @@
 <template>
-  <b-container fluid>
-    <b-col>
-      item
-    </b-col>
-    <b-col>
-      Card
-    </b-col>
-  </b-container>
+    <b-container fluid>
+        <b-col>
+            item
+        </b-col>
+        <b-col>
+            Card
+        </b-col>
+    </b-container>
 </template>
 
 <script>

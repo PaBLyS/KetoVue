@@ -35,7 +35,7 @@
         margin: 0 50px 0 0;
     }
 
-    .header-sticky a:hover{
+    .header-sticky a:hover {
         text-decoration: none;
     }
 </style>

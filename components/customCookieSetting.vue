@@ -1,11 +1,14 @@
 <template>
     <section class="block" v-if="status">
-        <p class="text">The cookie settings on this website are set to 'allow all cookies' to give you the very best experience. Please click Accept Cookies to continue to use the site.</p>
+        <p class="text">The cookie settings on this website are set to 'allow all cookies' to give you the very best
+            experience. Please click Accept Cookies to continue to use the site.</p>
         <div class="link-group">
             <nuxt-link to="/" class="link">privacy policy</nuxt-link>
             <button class="button" @click="editStatus">
                 accept
-                <svg version="1.1" class="check" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 442.533 442.533" style="enable-background:new 0 0 442.533 442.533;" xml:space="preserve">
+                <svg version="1.1" class="check" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 442.533 442.533"
+                     style="enable-background:new 0 0 442.533 442.533;" xml:space="preserve">
                     <g>
                         <path d="M434.539,98.499l-38.828-38.828c-5.324-5.328-11.799-7.993-19.41-7.993c-7.618,0-14.093,2.665-19.417,7.993L169.59,247.248
                             l-83.939-84.225c-5.33-5.33-11.801-7.992-19.412-7.992c-7.616,0-14.087,2.662-19.417,7.992L7.994,201.852
@@ -51,37 +54,46 @@
         color: #fff;
 
     }
+
     .check {
         height: 15px;
         width: 15px;
         margin-left: 8px;
     }
-    .check path{
+
+    .check path {
         fill: #fff;
     }
-    .button:hover{
+
+    .button:hover {
         color: #818181;
     }
-    .button:hover .check path{
+
+    .button:hover .check path {
         fill: #818181;
     }
+
     .text {
         margin-bottom: 10px;
         line-height: 24px;
         font-size: 14px;
     }
+
     .link-group {
         display: flex;
         text-transform: uppercase;
         font-size: 13px;
     }
+
     .link {
         color: #818181;
         text-decoration: none;
     }
-    .link:hover{
+
+    .link:hover {
         color: #fff;
     }
+
     .button {
         display: flex;
         align-items: center;
@@ -93,7 +105,8 @@
         font-weight: bold;
         letter-spacing: 1px;
     }
-    .button:active{
+
+    .button:active {
         outline: none;
     }
 </style>

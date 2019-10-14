@@ -1,14 +1,13 @@
 <template>
     <b-container fluid>
-      <b-row>
-        <b-col>
-          Keto Maxima
-          
-        </b-col>
-        <b-col>
+        <b-row>
+            <b-col>
+                Keto Maxima
+            </b-col>
+            <b-col>
 
-        </b-col>
-      </b-row>
+            </b-col>
+        </b-row>
     </b-container>
 </template>
 
