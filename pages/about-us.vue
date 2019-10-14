@@ -30,8 +30,8 @@
                         href: '/'
                     },
                     {
-                        text: 'Products',
-                        href: '/catalog'
+                        text: 'About Us',
+                        href: '/about-us'
                     }
                 ]
             }
