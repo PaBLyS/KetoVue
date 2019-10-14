@@ -1,29 +1,43 @@
 <template>
-    <b-container>
-        <b-row>
-            <b-col>
-                <div class="img-wrap">
-                    <img :src="'items/' + itemId + '/1.jpg'" alt="img">
-                </div>
-            </b-col>
-            <b-col>
-                <h3>{{ item.label }}</h3>
-                <p>Price: <span class="prise-sale">${{ item.prise }}</span> ${{ item.sale }}</p>
-                <button @click="addItem(itemId)">Add</button>
-                <p>{{ item.description }}</p>
-            </b-col>
-        </b-row>
-        <b-row>
-            <button>
-                go back
-            </button>
-        </b-row>
-    </b-container>
+    <section class="block">
+        <b-container>
+            <b-row>
+                <b-breadcrumb :items="itemsProd"></b-breadcrumb>
+            </b-row>
+            <b-row class="content">
+                <b-col cols="6">
+                    <div class="img-wrap">
+                        <img :src="'/items/' + itemId + '/1.png'" alt="img">
+                    </div>
+                </b-col>
+                <b-col cols="6">
+                    <h3 class="prod-name">{{ item.label }}</h3>
+                    <p class="prod-prise">${{ item.prise }}.00</p>
+                    <button class="prod-add" @click="addItem(itemId)">Add</button>
+                    <p>{{ item.description }}</p>
+                </b-col>
+            </b-row>
+        </b-container>
+    </section>
 </template>
 
 <script>
     export default {
         name: "products",
+        data() {
+            return {
+                itemsProd: [
+                    {
+                        text: 'Home',
+                        href: '/'
+                    },
+                    {
+                        text: 'Product',
+                        href: '/'
+                    }
+                ]
+            }
+        },
         computed: {
             itemId() {
                 return this.$route.query.id;
@@ -38,36 +52,41 @@
             }
         },
         beforeMount() {
-
+            this.itemsProd[1] = {
+                text: this.item.label,
+                href: 'products?id=' + this.itemId
+            }
         }
     }
 </script>
 
 <style scoped>
+    .block {
+        background-color: #f7cac9;
+    }
+
+    .breadcrumb {
+        background: transparent;
+        padding-left: 0;
+    }
+
+    .breadcrumb a,
+    .breadcrumb span {
+        font-size: 14px;
+        color: #232323;
+        text-decoration: none;
+    }
+
     .img-wrap {
-        height: 300px;
+        width: 80%;
     }
 
     .img-wrap img {
-        height: 100%;
-        width: auto;
-    }
-
-    .prise-sale {
-        font-weight: normal;
-        position: relative;
-    }
-
-    .prise-sale:after {
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        color: red;
         width: 100%;
-        height: 0;
-        border-bottom: 3px solid red;
-        transform: rotate(-20deg);
+        height: auto;
+    }
+
+    .content {
+        margin-top: 40px;
     }
 </style>
