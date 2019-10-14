@@ -38,10 +38,6 @@
         background-color: #f7cac9;
     }
 
-    h2 {
-        text-align: center;
-    }
-
     .breadcrumb {
         background: transparent;
         padding-left: 0;
@@ -53,9 +49,11 @@
         color: #232323;
         text-decoration: none;
     }
-    
+
     .label {
         text-align: left;
         text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
     }
 </style>
