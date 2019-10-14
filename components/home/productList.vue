@@ -3,6 +3,7 @@
         <div class="container">
             <div v-for="(item, index) in items"
                  :key="index"
+                 @click="goToItem(index)"
                  class="cards">
                 <div class="img__wrap">
                     <div class="img__hover">
@@ -26,6 +27,7 @@
             items() {
                 return this.$store.state.items
             }
+
         },
         methods: {
             goToItem(index) {
