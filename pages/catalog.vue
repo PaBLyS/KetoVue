@@ -55,5 +55,6 @@
         text-transform: uppercase;
         font-weight: bold;
         font-size: 20px;
+        margin-bottom: 40px;
     }
 </style>
