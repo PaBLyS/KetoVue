@@ -7,7 +7,15 @@
             <b-row class="content">
                 <b-col cols="6">
                     <div class="img-wrap">
-                        <img :src="'/items/' + itemId + '/1.png'" alt="img">
+                        <img :src="'/items/' + itemId + '/1.png'">
+                    </div>
+                    <div class="img-all">
+                        <img class="active"
+                             :src="'/items/' + itemId + '/1.png'">
+                        <img class=""
+                             :src="'/items/' + itemId + '/2.png'">
+                        <img class=""
+                             :src="'/items/' + itemId + '/3.png'">
                     </div>
                 </b-col>
                 <b-col cols="6">
@@ -16,9 +24,9 @@
                     <div>
                         <span>Quantity:</span>
                         <div class="quantity">
-                            <div class="quantity-minus" />
+                            <div class="quantity-minus"/>
                             <div class="quantity-number">{{ quantity }}</div>
-                            <div class="quantity-plus" />
+                            <div class="quantity-plus"/>
                         </div>
                     </div>
                     <button class="prod-add" @click="addItem(itemId)">Add to cart</button>
@@ -113,7 +121,7 @@
         margin: 10px 0;
     }
 
-    .quantity div{
+    .quantity div {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -128,7 +136,7 @@
 
     .quantity-minus:after,
     .quantity-plus:after,
-    .quantity-plus:before{
+    .quantity-plus:before {
         content: '';
         height: 2px;
         width: 10px;
@@ -148,7 +156,7 @@
         font-size: 14px;
         color: #2d2d2d;
     }
-    
+
     .prod-add {
         min-width: 240px;
         border: 1px solid #232323;
@@ -159,12 +167,24 @@
         text-transform: uppercase;
         padding: 12px 15px 10px;
         margin-bottom: 30px;
-        transition: color, background .3s ease-in;
+        transition: color, background .2s ease-in;
     }
-    
-    .prod-add:hover{
+
+    .prod-add:hover {
         color: #232323;
         background: #fff;
     }
 
+    .img-all {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin: 40px 0;
+    }
+
+    .img-all img {
+        height: auto;
+        width: 100px;
+        margin: 0 10px;
+    }
 </style>
