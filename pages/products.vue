@@ -13,8 +13,16 @@
                 <b-col cols="6">
                     <h3 class="prod-name">{{ item.label }}</h3>
                     <p class="prod-prise">${{ item.prise }}.00</p>
-                    <button class="prod-add" @click="addItem(itemId)">Add</button>
-                    <p>{{ item.description }}</p>
+                    <div>
+                        <span>Quantity:</span>
+                        <div class="quantity">
+                            <div class="quantity-minus" />
+                            <div class="quantity-number">{{ quantity }}</div>
+                            <div class="quantity-plus" />
+                        </div>
+                    </div>
+                    <button class="prod-add" @click="addItem(itemId)">Add to cart</button>
+                    <p class="description">{{ item.description }}</p>
                 </b-col>
             </b-row>
         </b-container>
@@ -35,7 +43,8 @@
                         text: 'Product',
                         href: '/'
                     }
-                ]
+                ],
+                quantity: 1
             }
         },
         computed: {
@@ -89,4 +98,73 @@
     .content {
         margin-top: 40px;
     }
+
+    .prod-prise {
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    .quantity {
+        max-width: 140px;
+        display: flex;
+        border: 1px solid #cdcdcd;
+        color: #232323;
+        margin: 10px 0;
+    }
+
+    .quantity div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .quantity-minus,
+    .quantity-plus {
+        min-height: 34px;
+        min-width: 32px;
+        position: relative;
+    }
+
+    .quantity-minus:after,
+    .quantity-plus:after,
+    .quantity-plus:before{
+        content: '';
+        height: 2px;
+        width: 10px;
+        background: #7b7b7b;
+        position: absolute;
+    }
+
+    .quantity-plus:before {
+        transform: rotate(90deg);
+    }
+
+    .quantity-number {
+        width: 100%;
+        text-align: center;
+        border-left: 1px solid #cdcdcd;
+        border-right: 1px solid #cdcdcd;
+        font-size: 14px;
+        color: #2d2d2d;
+    }
+    
+    .prod-add {
+        min-width: 240px;
+        border: 1px solid #232323;
+        color: #fff;
+        background: #232323;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 12px 15px 10px;
+        margin-bottom: 30px;
+        transition: color, background .3s ease-in;
+    }
+    
+    .prod-add:hover{
+        color: #232323;
+        background: #fff;
+    }
+
 </style>
