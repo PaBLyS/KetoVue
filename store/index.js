@@ -1,4 +1,11 @@
 export const state = () => ({
+    corpInfo: {
+        nameCorp: '',
+        addressCorp: '',
+        phoneCorp: '',
+        linkCorp: '',
+        brandName: ''
+    },
     items: [
         {
             label: 'Yogurt Skin Under-Eya Cream',
