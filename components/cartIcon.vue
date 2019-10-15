@@ -59,6 +59,8 @@
     }
 
     .shop-index {
+        min-width: 30px;
+        min-height: 30px;
         display: inline-block;
         text-align: center;
         border-radius: 100%;
