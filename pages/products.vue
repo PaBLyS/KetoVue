@@ -24,12 +24,14 @@
                     <div>
                         <span>Quantity:</span>
                         <div class="quantity">
-                            <div class="quantity-minus"/>
+                            <div class="quantity-minus"
+                                 @click="editQuantity(false)"/>
                             <div class="quantity-number">{{ quantity }}</div>
-                            <div class="quantity-plus"/>
+                            <div class="quantity-plus"
+                                 @click="editQuantity(true)"/>
                         </div>
                     </div>
-                    <button class="prod-add" @click="addItem(itemId)">Add to cart</button>
+                    <button class="prod-add" @click="addItem()">Add to cart</button>
                     <p class="description">{{ item.description }}</p>
                 </b-col>
             </b-row>
@@ -64,8 +66,11 @@
             }
         },
         methods: {
-            addItem(id) {
-                this.$store.commit('addQuantity', id);
+            addItem() {
+                this.$store.commit('addQuantity', { quantity: this.quantity, id: this.itemId});
+            },
+            editQuantity(status) {
+                status ? this.quantity++ : this.quantity < 2 ? this.quantity = 1 : this.quantity--;
             }
         },
         beforeMount() {
@@ -132,6 +137,7 @@
         min-height: 34px;
         min-width: 32px;
         position: relative;
+        cursor: pointer;
     }
 
     .quantity-minus:after,
