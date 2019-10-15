@@ -16,8 +16,7 @@
                         <img :class="{ active: activeImg == 2}"
                              @click="editImg(2)"
                              :src="'/items/' + itemId + '/2.png'">
-                        <img :class="{ active: activeImg == 3}"
-                             @click="editImg(3)"
+                        <img :class="{ active: activeImg == 3 }"
                              :src="'/items/' + itemId + '/3.png'">
                     </div>
                 </b-col>
@@ -84,7 +83,7 @@
             this.itemsProd[1] = {
                 text: this.item.label,
                 href: 'products?id=' + this.itemId
-            }
+            };
         }
     }
 </script>
@@ -192,6 +191,7 @@
         width: 100%;
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         margin: 40px 0;
     }
 
