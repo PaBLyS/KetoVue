@@ -25,7 +25,7 @@
             indexItem() {
                 let numbers = 0;
                 this.$store.state.cart.forEach((elem) => {
-                    if (elem.amount > 0) numbers++;
+                    if (elem.amount > 0) numbers += elem.amount;
                 });
                 return numbers;
             }
@@ -61,9 +61,8 @@
     .shop-index {
         display: inline-block;
         text-align: center;
-        height: 25px;
-        width: 25px;
         border-radius: 100%;
         background-color: #ffe5e5;
+        padding: 3px;
     }
 </style>
