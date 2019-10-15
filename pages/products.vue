@@ -7,14 +7,17 @@
             <b-row class="content">
                 <b-col cols="6">
                     <div class="img-wrap">
-                        <img :src="'/items/' + itemId + '/1.png'">
+                        <img :src="'/items/' + itemId + '/' + activeImg + '.png'">
                     </div>
                     <div class="img-all">
-                        <img class="active"
+                        <img :class="{ active: activeImg == 1}"
+                             @click="editImg(1)"
                              :src="'/items/' + itemId + '/1.png'">
-                        <img class=""
+                        <img :class="{ active: activeImg == 2}"
+                             @click="editImg(2)"
                              :src="'/items/' + itemId + '/2.png'">
-                        <img class=""
+                        <img :class="{ active: activeImg == 3}"
+                             @click="editImg(3)"
                              :src="'/items/' + itemId + '/3.png'">
                     </div>
                 </b-col>
@@ -54,7 +57,8 @@
                         href: '/'
                     }
                 ],
-                quantity: 1
+                quantity: 1,
+                activeImg: 1
             }
         },
         computed: {
@@ -67,10 +71,13 @@
         },
         methods: {
             addItem() {
-                this.$store.commit('addQuantity', { quantity: this.quantity, id: this.itemId});
+                this.$store.commit('addQuantity', {quantity: this.quantity, id: this.itemId});
             },
             editQuantity(status) {
                 status ? this.quantity++ : this.quantity < 2 ? this.quantity = 1 : this.quantity--;
+            },
+            editImg(id) {
+                this.activeImg = id;
             }
         },
         beforeMount() {
@@ -192,5 +199,9 @@
         height: auto;
         width: 100px;
         margin: 0 10px;
+    }
+
+    .active {
+        opacity: .7;
     }
 </style>
