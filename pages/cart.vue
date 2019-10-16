@@ -12,26 +12,28 @@
                 <div class="product">
                     <div class="product-label">products</div>
                     <ul class="prod-list">
-                        <li class="prod-item">
+                        <li class="prod-item"
+                            v-for="(elem, index) in cart"
+                        >
                             <div class="img-wrap">
-                                <img src="/items/0/1.png">
+                                <img :src="'/items/' + index + '/1.png'">
                             </div>
                             <div>
-                                <div class="prod-name">{{ products[0].label }}</div>
-                                <div class="prod-prise">${{ products[0].prise }}.00</div>
+                                <div class="prod-name">{{ products[index].label }}</div>
+                                <div class="prod-prise">${{ products[index].prise }}.00</div>
                                 <div>
                                     <span class="quantity-label">Quantity:</span>
                                     <div class="quantity">
                                         <div class="quantity-minus"
-                                             @click="editQuantity(false)"/>
-                                        <input class="quantity-number"
-                                               v-model="quantity"
-                                               @change="changeQuantity()"
+                                             @click="editQuantity(false, index)"/>
+                                        <input class="quantity-number" id="quantity"
+                                               :value="cart[index].amount"
+                                               @change="changeQuantity(index)"
                                         />
                                         <div class="quantity-plus"
-                                             @click="editQuantity(true)"/>
+                                             @click="editQuantity(true, index)"/>
                                     </div>
-                                    <div @click="$store.commit('deleteItem', 0)">
+                                    <div @click="$store.commit('deleteItem', index)">
                                         -
                                     </div>
                                 </div>
@@ -43,7 +45,7 @@
                     <div class="order-label">order summary</div>
                     <div class="order-total">
                         <div>Total:</div>
-                        <div class="order-total-number">${{ }}.00</div>
+                        <div class="order-total-number">${{ totalPrice }}.00</div>
                     </div>
                     <div class="order-note">
                         <span class="order-note-icon">Note</span>
@@ -78,40 +80,54 @@
                         href: '/'
                     },
                     {
-                        text: 'Shoping Cart',
+                        text: 'Shopping Cart',
                         href: '/cart'
                     }
                 ],
                 products: this.$store.state.items,
-                quantity: this.$store.state.cart[0].amount
+                cart: this.$store.state.cart
             }
         },
         computed: {
             totalPrice() {
                 let total = 0;
-                this.$store.state.cart.forEach((elem, index) => {
-                    total += this.$store.state.items[index].sale * elem.amount;
+                this.$store.state.items.forEach((elem, index) => {
+                    total += elem.prise * this.cart[index].amount;
                 });
                 return total;
-            },
-            visiblTabl() {
-                let result = false;
-                this.$store.state.cart.forEach(elem => {
-                    if (elem.amount > 0) result = true;
-                });
-                return result;
             }
+            // visiblTabl() {
+            //     let result = false;
+            //     this.$store.state.cart.forEach(elem => {
+            //         if (elem.amount > 0) result = true;
+            //     });
+            //     return result;
+            // }
         },
         methods: {
             deleteItem(id) {
                 this.$store.commit('deleteItem', id);
             },
-            editQuantity(status) {
-                status ? this.quantity++ : this.quantity < 2 ? this.quantity = 1 : this.quantity--;
-                this.changeQuantity();
+            editQuantity(status, id) {
+                status ?
+                    this.$store.commit('addQuantity', {
+                        quantity: 1,
+                        id: id
+                    })
+                    : this.$store.state.cart[id].amount > 0 ?
+                    this.$store.commit('addQuantity', {
+                        quantity: -1,
+                        id: id
+                    })
+                    :
+                    this.$store.commit('addQuantity', {
+                        quantity: 0,
+                        id: id
+                    })
             },
-            changeQuantity() {
-                this.$store.commit('changeQuantity', {quantity: this.quantity, id: 0});
+            changeQuantity(id) {
+                let amountItem = document.getElementById('quantity').value;
+                this.$store.commit('changeQuantity', {quantity: amountItem, id: id});
             }
         }
     }
