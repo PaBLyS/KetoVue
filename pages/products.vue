@@ -28,7 +28,10 @@
                         <div class="quantity">
                             <div class="quantity-minus"
                                  @click="editQuantity(false)"/>
-                            <div class="quantity-number">{{ quantity }}</div>
+                            <input class="quantity-number"
+                                   :value="quantity"
+                                   @input="changeQuantity()"
+                            />
                             <div class="quantity-plus"
                                  @click="editQuantity(true)"/>
                         </div>
@@ -77,6 +80,9 @@
             },
             editImg(id) {
                 this.activeImg = id;
+            },
+            changeQuantity(type, target) {
+                this.quantity = target.value;
             }
         },
         beforeMount() {
@@ -163,10 +169,16 @@
     .quantity-number {
         width: 100%;
         text-align: center;
+        border: none;
         border-left: 1px solid #cdcdcd;
         border-right: 1px solid #cdcdcd;
         font-size: 14px;
         color: #2d2d2d;
+        background: transparent;
+    }
+
+    .quantity-number:focus {
+        outline: none;
     }
 
     .prod-add {
