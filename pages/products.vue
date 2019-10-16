@@ -29,8 +29,7 @@
                             <div class="quantity-minus"
                                  @click="editQuantity(false)"/>
                             <input class="quantity-number"
-                                   :value="quantity"
-                                   @input="changeQuantity()"
+                                   v-model="quantity"
                             />
                             <div class="quantity-plus"
                                  @click="editQuantity(true)"/>
@@ -80,9 +79,6 @@
             },
             editImg(id) {
                 this.activeImg = id;
-            },
-            changeQuantity(type, target) {
-                this.quantity = target.value;
             }
         },
         beforeMount() {

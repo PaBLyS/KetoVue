@@ -39,7 +39,10 @@ export const state = () => ({
 
 export const mutations = {
     addQuantity(state, obj) {
-        state.cart[parseInt(obj.id)].amount += obj.quantity;
+        state.cart[parseInt(obj.id)].amount += parseInt(obj.quantity);
+    },
+    changeQuantity(state, obj) {
+        state.cart[parseInt(obj.id)].amount = obj.quantity;
     },
     deleteItem(state, id) {
         state.cart[id].amount = 0;

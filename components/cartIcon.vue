@@ -27,7 +27,7 @@
                 this.$store.state.cart.forEach((elem) => {
                     if (elem.amount > 0) numbers += elem.amount;
                 });
-                return numbers;
+                return parseInt(numbers);
             }
         },
         methods: {

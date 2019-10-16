@@ -3,7 +3,7 @@
         <p class="text">The cookie settings on this website are set to 'allow all cookies' to give you the very best
             experience. Please click Accept Cookies to continue to use the site.</p>
         <div class="link-group">
-            <nuxt-link to="/" class="link">privacy policy</nuxt-link>
+            <nuxt-link to="/privacy-policy" class="link">privacy policy</nuxt-link>
             <button class="button" @click="editStatus">
                 accept ✔
             </button>
