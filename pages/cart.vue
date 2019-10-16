@@ -6,7 +6,7 @@
             </b-row>
             <b-row class="cart-header">
                 <h2 class="label">my cart</h2>
-                <nuxt-link to="/">Continue Shopping</nuxt-link>
+                <nuxt-link to="/catalog" class="continue">Continue Shopping</nuxt-link>
             </b-row>
             <b-row class="content">
                 <div class="product">
@@ -23,18 +23,21 @@
                                 <div class="prod-prise">${{ products[index].prise }}.00</div>
                                 <div>
                                     <span class="quantity-label">Quantity:</span>
-                                    <div class="quantity">
-                                        <div class="quantity-minus"
-                                             @click="editQuantity(false, index)"/>
-                                        <input class="quantity-number" id="quantity"
-                                               :value="cart[index].amount"
-                                               @change="changeQuantity(index)"
-                                        />
-                                        <div class="quantity-plus"
-                                             @click="editQuantity(true, index)"/>
-                                    </div>
-                                    <div @click="$store.commit('deleteItem', index)">
-                                        -
+                                    <div class="quantity-wrap">
+                                        <div class="quantity">
+                                            <div class="quantity-minus"
+                                                 @click="editQuantity(false, index)"/>
+                                            <input class="quantity-number" id="quantity"
+                                                   :value="cart[index].amount"
+                                                   @change="changeQuantity(index)"
+                                            />
+                                            <div class="quantity-plus"
+                                                 @click="editQuantity(true, index)"/>
+                                        </div>
+                                        <div @click="$store.commit('deleteItem', index)"
+                                             class="remove">
+                                            <span class="underline underline-black">Remove</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -62,7 +65,7 @@
                             .
                         </label>
                     </p>
-                    <button>proceed to checkout</button>
+                    <button class="sub-button">proceed to checkout</button>
                 </div>
             </b-row>
         </b-container>
@@ -180,11 +183,62 @@
     .prod-item {
         list-style: none;
         display: flex;
+        padding: 28px 0 35px;
+        border-top: 1px solid #e6e6e6;
+    }
+
+    .prod-name {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .prod-prise {
+        color: #3c3c3c;
+        font-size: 13px;
+        font-weight: 600;
+        margin: 6px 0 18px;
+    }
+
+    .quantity-wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    .remove {
+        padding-left: 28px;
+        position: relative;
+        color: #232323;
+        font-size: 12px;
+        font-weight: 500;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    .remove:after,
+    .remove:before {
+        top: 8px;
+        left: 0px;
+        content: '';
+        position: absolute;
+        background-color: #000;
+        height: 2px;
+        width: 15px;
+        border-radius: 10px;
+        transform: rotate(45deg);
+    }
+
+    .remove:before {
+        transform: rotate(-45deg);
+    }
+
+    .underline-black:after {
+        background-color: #000;
     }
 
     .img-wrap {
-        width: 150px;
+        width: 120px;
         height: 200px;
+        margin-right: 30px;
     }
 
     .img-wrap img {
@@ -309,6 +363,7 @@
     .quantity-label {
         font-size: 12px;
         font-weight: 500;
+        margin-bottom: 9px;
     }
 
     .quantity div {
@@ -355,4 +410,43 @@
         outline: none;
     }
 
+    .sub-button {
+        width: 100%;
+        border: none;
+        padding: 13px 15px 13px;
+        background: #232323;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .continue {
+        color: #232323;
+        font-size: 12px;
+        font-weight: 500;
+        position: relative;
+        padding-right: 10px;
+    }
+
+    .continue:hover {
+        text-decoration: none;
+    }
+
+    .continue:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 10%;
+        height: 8px;
+        width: 8px;
+        border-top: 1px solid #232323;
+        border-right: 1px solid #232323;
+        transform: rotate(45deg);
+        transition: right .3s ease-in;
+    }
+
+    .continue:hover:after {
+        right: -5px;
+    }
 </style>
