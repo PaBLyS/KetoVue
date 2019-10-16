@@ -36,7 +36,7 @@
     }
 
     .header-phone {
-        font-size: 14px;
+        font-size: 12px;
         color: #323232;
     }
 
@@ -62,8 +62,8 @@
     .header-cart__text {
         display: inline-block;
         padding: 17px 0;
-        font-size: 14px;
+        font-size: 12px;
         color: #2e2c2c;
-        font-weight: bold;
+        font-weight: 600;
     }
 </style>

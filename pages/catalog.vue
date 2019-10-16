@@ -45,7 +45,7 @@
 
     .breadcrumb a,
     .breadcrumb span {
-        font-size: 14px;
+        font-size: 12px;
         color: #232323;
         text-decoration: none;
     }

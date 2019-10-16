@@ -55,14 +55,16 @@
         display: inline-block;
         margin: 0 5px;
         color: #323232;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .shop-index {
-        min-width: 30px;
-        min-height: 30px;
+        min-width: 23px;
+        min-height: 23px;
         display: inline-block;
         text-align: center;
+
+        font-size: 12px;
         border-radius: 100%;
         background-color: #ffe5e5;
         padding: 3px;

@@ -90,14 +90,14 @@
     }
 
     .name-product {
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 500;
         margin-top: 30px;
         cursor: pointer;
     }
 
     .price-product {
-        font-size: 18px;
+        font-size: 13px;
         font-weight: 600;
         margin: 15px 0;
     }

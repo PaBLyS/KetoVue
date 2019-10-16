@@ -69,15 +69,25 @@
     .carousel-caption h2 {
         color: #000;
         font-size: 30px;
-        font-weight: bold;
+        font-weight: 700;
     }
 
     .carousel-caption a {
+        display: inline-block;
         color: #fff;
-        font-weight: bold;
+        width: 270px;
+        padding: 10px 25px 8px;
+        font-weight: 700;
+        font-size: 13px;
         text-decoration: none;
         background: #232323;
-        padding: 7px 30px;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+        transition: all .3s ease-in;
+    }
+    
+    .carousel-caption a:hover{
+        color: #000;
+        background: #fff;
     }
 
     .carousel-caption-line {

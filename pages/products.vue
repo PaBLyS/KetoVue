@@ -24,7 +24,7 @@
                     <h3 class="prod-name">{{ item.label }}</h3>
                     <p class="prod-prise">${{ item.prise }}.00</p>
                     <div>
-                        <span>Quantity:</span>
+                        <span class="quantity-label">Quantity:</span>
                         <div class="quantity">
                             <div class="quantity-minus"
                                  @click="editQuantity(false)"/>
@@ -106,7 +106,7 @@
 
     .breadcrumb a,
     .breadcrumb span {
-        font-size: 14px;
+        font-size: 12px;
         color: #232323;
         text-decoration: none;
     }
@@ -124,8 +124,13 @@
         margin-top: 40px;
     }
 
+    .prod-name {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
     .prod-prise {
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 600;
         margin-top: 20px;
     }
@@ -136,6 +141,11 @@
         border: 1px solid #cdcdcd;
         color: #232323;
         margin: 10px 0;
+    }
+
+    .quantity-label {
+        font-size: 12px;
+        font-weight: 500;
     }
 
     .quantity div {
@@ -172,7 +182,8 @@
         border: none;
         border-left: 1px solid #cdcdcd;
         border-right: 1px solid #cdcdcd;
-        font-size: 14px;
+        font-size: 12px;
+        font-weight: 400;
         color: #2d2d2d;
         background: transparent;
     }
@@ -186,8 +197,8 @@
         border: 1px solid #232323;
         color: #fff;
         background: #232323;
-        font-size: 14px;
-        font-weight: bold;
+        font-size: 13px;
+        font-weight: 700;
         text-transform: uppercase;
         padding: 12px 15px 10px;
         margin-bottom: 30px;

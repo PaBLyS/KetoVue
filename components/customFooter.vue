@@ -20,14 +20,14 @@
             </b-container>
         </b-container>
         <b-container class="footer-bottom">
-            <p>© 2019, Yogurt Skin Cream</p>
-            <p>FOOD AND DRUG ADMINISTRATION (FDA) DISCLOSURE This product is not for use by or sale to persons under the
-                age of 18. This product should be used only as directed on the label. It should not be used if you are
-                pregnant or nursing. Consult with a physician before use if you have a serious medical condition or use
-                prescription medications. All trademarks and copyrights are the property of their respective owners and
-                are not affiliated with nor do they endorse. These statements have not been evaluated by the FDA. This
-                product is not intended to diagnose, treat, cure or prevent any disease. Individual results will vary.
-                By using this site you agree to follow the
+            <p>© 2019, Yogurt Skin Cream <br>
+                FOOD AND DRUG ADMINISTRATION (FDA) DISCLOSURE This product is not for use by or sale to persons under
+                the age of 18. This product should be used only as directed on the label. It should not be used if you
+                are pregnant or nursing. Consult with a physician before use if you have a serious medical condition or
+                use prescription medications. All trademarks and copyrights are the property of their respective owners
+                andare not affiliated with nor do they endorse. These statements have not been evaluated by the FDA.
+                Thisproduct is not intended to diagnose, treat, cure or prevent any disease. Individual results will
+                vary. By using this site you agree to follow the
                 <nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link>
                 and all
                 <nuxt-link to="/terms-and-conditions">Terms & Conditions</nuxt-link>
@@ -60,7 +60,8 @@
 
     .footer-link {
         color: #969696;
-        font-size: 14px;
+        font-size: 12px;
+        font-weight: 400;
         line-height: 24px;
         padding: 3px 0;
         text-decoration: none;
@@ -81,7 +82,8 @@
     }
 
     .footer-bottom {
-        font-size: 14px;
+        font-size: 12px;
+        line-height: 28px;
         padding: 25px 0 65px;
     }
 

@@ -52,7 +52,7 @@
 
     .breadcrumb a,
     .breadcrumb span {
-        font-size: 14px;
+        font-size: 12px;
         color: #232323;
         text-decoration: none;
     }
@@ -60,21 +60,22 @@
     .label {
         text-align: left;
         text-transform: uppercase;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 20px;
         margin-bottom: 40px;
     }
 
     .sub-label {
         text-align: left;
-        font-weight: bold;
-        font-size: 18px;
+        font-weight: 600;
+        font-size: 12px;
         margin-top: 30px;
     }
 
     .text {
         line-height: 24px;
-        font-size: 14px;
+        font-size: 12px;
+        font-weight: 400 ;
         margin-bottom: 6px;
     }
 </style>

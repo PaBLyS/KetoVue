@@ -4,6 +4,11 @@ body {
     font-family: Poppins, "Arial", "sans-serif";
 }
 
+a,
+a:focus{
+    outline: none;
+}
+
 .underline {
     position: relative;
 }

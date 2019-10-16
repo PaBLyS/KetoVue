@@ -29,9 +29,9 @@
 
     .header-sticky a {
         color: #fff;
-        font-size: 14px;
-        font-weight: bold;
-        letter-spacing: 2px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: .05em;
         margin: 0 50px 0 0;
     }
 
