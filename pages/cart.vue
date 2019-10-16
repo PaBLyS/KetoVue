@@ -8,12 +8,14 @@
                 <h2 class="label">my cart</h2>
                 <nuxt-link to="/catalog" class="continue">Continue Shopping</nuxt-link>
             </b-row>
-            <b-row class="content">
+            <b-row class="content"
+                   v-if="visiblTabl">
                 <div class="product">
                     <div class="product-label">products</div>
                     <ul class="prod-list">
                         <li class="prod-item"
                             v-for="(elem, index) in cart"
+                            v-if="cart[index].amount"
                         >
                             <div class="img-wrap">
                                 <img :src="'/items/' + index + '/1.png'">
@@ -68,6 +70,11 @@
                     <button class="sub-button">proceed to checkout</button>
                 </div>
             </b-row>
+            <b-row class="clear"
+                   v-else>
+                <div class="clear-first">Your cart is currently empty.</div>
+                <div class="clear-second">Continue browsing <nuxt-link to="/catalog">here</nuxt-link>.</div>
+            </b-row>
         </b-container>
     </section>
 </template>
@@ -98,14 +105,14 @@
                     total += elem.prise * this.cart[index].amount;
                 });
                 return total;
+            },
+            visiblTabl() {
+                let result = false;
+                this.$store.state.cart.forEach(elem => {
+                    if (elem.amount > 0) result = true;
+                });
+                return result;
             }
-            // visiblTabl() {
-            //     let result = false;
-            //     this.$store.state.cart.forEach(elem => {
-            //         if (elem.amount > 0) result = true;
-            //     });
-            //     return result;
-            // }
         },
         methods: {
             deleteItem(id) {
@@ -448,5 +455,31 @@
 
     .continue:hover:after {
         right: -5px;
+    }
+
+    .clear-first {
+        width: 100%;
+        margin: 24px 0 15px;
+        padding: 9px 15px 7px;
+        color: #856404;
+        font-size: 12px;
+        font-weight: 400;
+        background-color: #fff3cd;
+        border-color: #ffeeba;
+        text-align: center;
+    }
+
+    .clear-second {
+        width: 100%;
+        margin: 0 0 15px;
+        padding: 9px 15px 7px;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .clear-second a:hover{
+        text-decoration: none;
+        color: #232323;
     }
 </style>
