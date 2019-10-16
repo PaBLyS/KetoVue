@@ -73,7 +73,10 @@
             <b-row class="clear"
                    v-else>
                 <div class="clear-first">Your cart is currently empty.</div>
-                <div class="clear-second">Continue browsing <nuxt-link to="/catalog">here</nuxt-link>.</div>
+                <div class="clear-second">Continue browsing
+                    <nuxt-link to="/catalog">here</nuxt-link>
+                    .
+                </div>
             </b-row>
         </b-container>
     </section>
@@ -478,7 +481,7 @@
         text-align: center;
     }
 
-    .clear-second a:hover{
+    .clear-second a:hover {
         text-decoration: none;
         color: #232323;
     }
