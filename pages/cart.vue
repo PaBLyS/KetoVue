@@ -11,19 +11,28 @@
             <b-row class="content">
                 <div class="product">
                     <div class="product-label">products</div>
-                    <ul>
-                        <li>
+                    <ul class="prod-list">
+                        <li class="prod-item">
+                            <div class="img-wrap">
+                                <img src="/items/0/1.png">
+                            </div>
                             <div>
+                                <div class="prod-name">{{ products[0].label }}</div>
+                                <div class="prod-prise">${{ products[0].prise }}.00</div>
                                 <div>
-                                    <img src="">
-                                </div>
-                                <div>
-                                    <div>name</div>
-                                    <div>prise</div>
-                                    <div>
-                                        <span>Quantity:</span>
-                                        <div>+-</div>
-                                        <div>remove</div>
+                                    <span class="quantity-label">Quantity:</span>
+                                    <div class="quantity">
+                                        <div class="quantity-minus"
+                                             @click="editQuantity(false)"/>
+                                        <input class="quantity-number"
+                                               v-model="quantity"
+                                               @change="changeQuantity()"
+                                        />
+                                        <div class="quantity-plus"
+                                             @click="editQuantity(true)"/>
+                                    </div>
+                                    <div @click="$store.commit('deleteItem', 0)">
+                                        -
                                     </div>
                                 </div>
                             </div>
@@ -34,7 +43,7 @@
                     <div class="order-label">order summary</div>
                     <div class="order-total">
                         <div>Total:</div>
-                        <div>$</div>
+                        <div class="order-total-number">${{ }}.00</div>
                     </div>
                     <div class="order-note">
                         <span class="order-note-icon">Note</span>
@@ -47,7 +56,8 @@
                             I agree with the
                             <nuxt-link to="/terms-and-conditions" class="check-link">terms and conditions</nuxt-link>
                             and
-                            <nuxt-link to="/privacy-policy" class="check-link"> privacy policy</nuxt-link>.
+                            <nuxt-link to="/privacy-policy" class="check-link"> privacy policy</nuxt-link>
+                            .
                         </label>
                     </p>
                     <button>proceed to checkout</button>
@@ -71,7 +81,9 @@
                         text: 'Shoping Cart',
                         href: '/cart'
                     }
-                ]
+                ],
+                products: this.$store.state.items,
+                quantity: this.$store.state.cart[0].amount
             }
         },
         computed: {
@@ -93,6 +105,13 @@
         methods: {
             deleteItem(id) {
                 this.$store.commit('deleteItem', id);
+            },
+            editQuantity(status) {
+                status ? this.quantity++ : this.quantity < 2 ? this.quantity = 1 : this.quantity--;
+                this.changeQuantity();
+            },
+            changeQuantity() {
+                this.$store.commit('changeQuantity', {quantity: this.quantity, id: 0});
             }
         }
     }
@@ -112,7 +131,7 @@
 
     .breadcrumb a,
     .breadcrumb span {
-        font-size: 14px;
+        font-size: 12px;
         color: #232323;
         text-decoration: none;
     }
@@ -138,6 +157,26 @@
         margin-right: 20px;
     }
 
+    .prod-list {
+        padding: 0;
+    }
+
+    .prod-item {
+        list-style: none;
+        display: flex;
+    }
+
+    .img-wrap {
+        width: 150px;
+        height: 200px;
+    }
+
+    .img-wrap img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
     .product-label,
     .order-label {
         text-transform: uppercase;
@@ -145,7 +184,7 @@
         background: #fafafa;
         border-bottom: 1px solid #e7e7e7;
         color: #5a5a5a;
-        font-weight: bold;
+        font-weight: 600;
         font-size: 12px;
     }
 
@@ -164,7 +203,12 @@
         margin: 0 0 24px;
         border-bottom: 1px solid #e6e6e6;
         font-size: 12px;
-        font-weight: bold;
+        font-weight: 500;
+    }
+
+    .order-total-number {
+        font-size: 16px;
+        font-weight: 500;
     }
 
     .order-note {
@@ -196,33 +240,41 @@
 
     .check-label {
         margin-left: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #232323;
     }
 
-    .check-input:checked+check-label:before {
+    .check-link {
+        color: #232323;
+    }
+
+    .check-input:checked + .check-label:before {
         content: '';
         width: 9px;
         height: 5px;
         position: absolute;
-        top: 6px;
+        top: 5px;
         left: 3px;
         border: 2px solid #232323;
         border-top: none;
         border-right: none;
-        background: rgba(255,255,255,0);
+        background: rgb(255, 255, 255);
         transform: rotate(-45deg);
         transition: all 0.1s;
+        opacity: 0;
+        z-index: 99;
     }
 
-    .check-input:checked+check-label:before {
+    .check-input:checked + .check-label:before {
         opacity: 1;
         transform: scale(1) rotate(-45deg);
     }
 
-
-    .check-label:before {
+    .check-label:after {
         position: absolute;
         content: "";
-        top: 5px;
+        top: 2.5px;
         left: 0;
         border: 1px solid #d0d0d0;
         width: 14px;
@@ -230,5 +282,61 @@
         background-color: #fff;
     }
 
+    .quantity {
+        max-width: 140px;
+        display: flex;
+        border: 1px solid #cdcdcd;
+        color: #232323;
+        margin: 10px 0;
+    }
+
+    .quantity-label {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .quantity div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .quantity-minus,
+    .quantity-plus {
+        min-height: 34px;
+        min-width: 32px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .quantity-minus:after,
+    .quantity-plus:after,
+    .quantity-plus:before {
+        content: '';
+        height: 2px;
+        width: 10px;
+        background: #7b7b7b;
+        position: absolute;
+    }
+
+    .quantity-plus:before {
+        transform: rotate(90deg);
+    }
+
+    .quantity-number {
+        width: 100%;
+        text-align: center;
+        border: none;
+        border-left: 1px solid #cdcdcd;
+        border-right: 1px solid #cdcdcd;
+        font-size: 12px;
+        font-weight: 400;
+        color: #2d2d2d;
+        background: transparent;
+    }
+
+    .quantity-number:focus {
+        outline: none;
+    }
 
 </style>
