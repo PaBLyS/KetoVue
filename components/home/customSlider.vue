@@ -15,7 +15,7 @@
             >
                 <h2>INCREASE HYDRATION</h2>
                 <div class="carousel-caption-line"></div>
-                <nuxt-link to="/">SHOP THE COLLECTION</nuxt-link>
+                <nuxt-link to="/catalog">SHOP THE COLLECTION</nuxt-link>
             </b-carousel-slide>
 
             <b-carousel-slide
@@ -23,7 +23,7 @@
             >
                 <h2>IMPROVE APPEARANCE</h2>
                 <div class="carousel-caption-line"></div>
-                <nuxt-link to="/">SHOP THE COLLECTION</nuxt-link>
+                <nuxt-link to="/catalog">SHOP THE COLLECTION</nuxt-link>
             </b-carousel-slide>
 
             <b-carousel-slide
@@ -31,7 +31,7 @@
             >
                 <h2>REDUCE WRINKLES</h2>
                 <div class="carousel-caption-line"></div>
-                <nuxt-link to="/">SHOP THE COLLECTION</nuxt-link>
+                <nuxt-link to="/catalog">SHOP THE COLLECTION</nuxt-link>
             </b-carousel-slide>
 
         </b-carousel>
@@ -81,11 +81,11 @@
         font-size: 13px;
         text-decoration: none;
         background: #232323;
-        box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
         transition: all .3s ease-in;
     }
-    
-    .carousel-caption a:hover{
+
+    .carousel-caption a:hover {
         color: #000;
         background: #fff;
     }
