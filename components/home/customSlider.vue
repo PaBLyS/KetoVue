@@ -1,39 +1,27 @@
 <template>
     <div>
-        <b-carousel
-                id="carousel-1"
-                v-model="slide"
-                :interval="4000"
-                controls
-                indicators
-                @sliding-start="onSlideStart"
-                @sliding-end="onSlideEnd"
-        >
-
-            <b-carousel-slide
-                    img-src="/slider/0.jpg"
-            >
+        <b-carousel id="carousel-1"
+                    v-model="slide"
+                    :interval="4000"
+                    controls
+                    indicators
+                    @sliding-start="onSlideStart"
+                    @sliding-end="onSlideEnd">
+            <b-carousel-slide img-src="/slider/0.jpg">
                 <h2>INCREASE HYDRATION</h2>
                 <div class="carousel-caption-line"></div>
                 <nuxt-link to="/catalog">SHOP THE COLLECTION</nuxt-link>
             </b-carousel-slide>
-
-            <b-carousel-slide
-                    img-src="/slider/1.jpg"
-            >
+            <b-carousel-slide img-src="/slider/1.jpg">
                 <h2>IMPROVE APPEARANCE</h2>
                 <div class="carousel-caption-line"></div>
                 <nuxt-link to="/catalog">SHOP THE COLLECTION</nuxt-link>
             </b-carousel-slide>
-
-            <b-carousel-slide
-                    img-src="/slider/2.jpg"
-            >
+            <b-carousel-slide img-src="/slider/2.jpg">
                 <h2>REDUCE WRINKLES</h2>
                 <div class="carousel-caption-line"></div>
                 <nuxt-link to="/catalog">SHOP THE COLLECTION</nuxt-link>
             </b-carousel-slide>
-
         </b-carousel>
     </div>
 </template>

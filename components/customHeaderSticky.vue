@@ -24,7 +24,7 @@
         position: sticky;
         top: 0;
         background: #232323;
-        z-index: 999;
+        z-index: 199;
     }
 
     .header-sticky a {
