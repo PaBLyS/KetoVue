@@ -29,7 +29,7 @@
                                         <div class="quantity">
                                             <div class="quantity-minus"
                                                  @click="editQuantity(false, index)"/>
-                                            <input class="quantity-number" id="quantity"
+                                            <input class="quantity-number" :id="'quantity' + index"
                                                    :value="cart[index].amount"
                                                    @change="changeQuantity(index)"
                                             />
@@ -104,14 +104,14 @@
         computed: {
             totalPrice() {
                 let total = 0;
-                this.$store.state.items.forEach((elem, index) => {
+                this.products.forEach((elem, index) => {
                     total += elem.prise * this.cart[index].amount;
                 });
                 return total;
             },
             visiblTabl() {
                 let result = false;
-                this.$store.state.cart.forEach(elem => {
+                this.cart.forEach(elem => {
                     if (elem.amount > 0) result = true;
                 });
                 return result;
@@ -127,7 +127,7 @@
                         quantity: 1,
                         id: id
                     })
-                    : this.$store.state.cart[id].amount > 0 ?
+                    : this.cart[id].amount > 0 ?
                     this.$store.commit('addQuantity', {
                         quantity: -1,
                         id: id
@@ -139,7 +139,8 @@
                     })
             },
             changeQuantity(id) {
-                let amountItem = document.getElementById('quantity').value;
+                let elemId = 'quantity' + id;
+                let amountItem = document.getElementById(elemId).value;
                 this.$store.commit('changeQuantity', {quantity: amountItem, id: id});
             }
         }
