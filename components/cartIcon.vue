@@ -16,7 +16,7 @@
             <span class="shop-text">Shopping Cart</span>
             <span class="shop-index">{{ indexItem }}</span>
         </div>
-        <div class=""></div>
+        <div class="clear"></div>
         <ul class="hover-list">
             <li class="hover-item"
                 v-for="(elem, index) in cart"
@@ -48,7 +48,6 @@
                 </div>
             </li>
         </ul>
-
     </section>
 </template>
 
@@ -130,15 +129,14 @@
         position: relative;
     }
 
-    /*.cart:hover .hover-list {*/
-    .cart .hover-list {
+    .cart:hover .hover-list {
         display: block;
     }
 
     .hover-list {
         width: 300px;
         position: absolute;
-        top: 100%;
+        top: 135%;
         left: 10px;
         display: none;
         overflow: hidden;
@@ -190,6 +188,7 @@
         justify-content: space-between;
         align-items: center;
         font-size: 12px;
+        padding: 18px 0 15px;
     }
 
     .total-prise {
@@ -203,17 +202,46 @@
     .last {
         border: none;
         display: block;
+        padding: 0;
     }
 
     .button {
-
+        width: 100%;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 8px 15px 6px;
+        margin-bottom: 10px;
+        transition: all .2s ease-in;
+        cursor: pointer;
     }
 
     .button-check {
+        background: #e95144;
+        color: #fff;
+    }
 
+    .button-check:hover {
+        background: #3c3c3c;
     }
 
     .button-view {
+        background: #fff;
+        color: #232323;
+        border: 1px solid #3c3c3c;
+    }
 
+    .button-view:hover {
+        color: #fff;
+        background: #3c3c3c;
+    }
+
+    .clear {
+        width: 100%;
+        height: 10px;
+        position: absolute;
+        top: 100%;
+        left: 10px;
     }
 </style>
