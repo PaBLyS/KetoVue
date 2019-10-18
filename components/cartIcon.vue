@@ -58,47 +58,47 @@
 </template>
 
 <script>
-export default {
-    name: "cartIcon",
-    data() {
-        return {
-            products: this.$store.state.items,
-            cart: this.$store.state.cart
-        }
-    },
-    computed: {
-        indexItem() {
-            let numbers = 0;
-            this.$store.state.cart.forEach((elem) => {
-                if (elem.amount > 0) numbers += elem.amount;
-            });
-            return parseInt(numbers);
+    export default {
+        name: "cartIcon",
+        data() {
+            return {
+                products: this.$store.state.items,
+                cart: this.$store.state.cart
+            }
         },
-        totalPrice() {
-            let total = 0;
-            this.$store.state.items.forEach((elem, index) => {
-                total += elem.prise * this.cart[index].amount;
-            });
-            return total;
+        computed: {
+            indexItem() {
+                let numbers = 0;
+                this.$store.state.cart.forEach((elem) => {
+                    if (elem.amount > 0) numbers += elem.amount;
+                });
+                return parseInt(numbers);
+            },
+            totalPrice() {
+                let total = 0;
+                this.$store.state.items.forEach((elem, index) => {
+                    total += elem.prise * this.cart[index].amount;
+                });
+                return total;
+            },
+            visiblTabl() {
+                let result = false;
+                this.$store.state.cart.forEach(elem => {
+                    if (elem.amount > 0) result = true;
+                });
+                return result;
+            }
         },
-        visiblTabl() {
-            let result = false;
-            this.$store.state.cart.forEach(elem => {
-                if (elem.amount > 0) result = true;
-            });
-            return result;
-        }
-    },
-    methods: {
-        goToCart() {
-            this.transition = 'slide';
-            this.$router.push({path: '/cart'});
-        },
-        deleteItem(id) {
-            this.$store.commit('deleteItem', id);
+        methods: {
+            goToCart() {
+                this.transition = 'slide';
+                this.$router.push({path: '/cart'});
+            },
+            deleteItem(id) {
+                this.$store.commit('deleteItem', id);
+            }
         }
     }
-}
 </script>
 
 <style scoped>
