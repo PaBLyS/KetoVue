@@ -33,7 +33,7 @@
                 </div>
                 <div><span class="delete" @click="deleteItem(index)">X</span></div>
             </li>
-            <li class="hover-item last">
+            <li class="hover-item last" v-if="visiblTabl">
                 <div class="total">
                     <div>Total:</div>
                     <div class="total-prise">${{ totalPrice }}.00</div>
@@ -47,11 +47,17 @@
                     </div>
                 </div>
             </li>
+            <li class="hover-item last" v-else>
+                <p class="text">Your cart is currently empty.</p>
+                <div class="button button-view">
+                    Continue Shopping
+                </div>
+            </li>
         </ul>
     </section>
 </template>
 
-<script>
+<script>0
     export default {
         name: "cartIcon",
         data() {
@@ -243,5 +249,11 @@
         position: absolute;
         top: 100%;
         left: 10px;
+    }
+
+    .text {
+        margin: 15px 0;
+        text-align: center;
+        font-size: 12px;
     }
 </style>
