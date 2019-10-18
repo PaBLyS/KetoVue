@@ -3,9 +3,9 @@
         <b-container>
             <b-breadcrumb :items="items"></b-breadcrumb>
             <h2 class="label">Ingredients</h2>
-            <div v-for="(item, index) in itemsIngridient"
+            <div v-for="(item, index) in itemsIngredient"
                  :key="index"
-                 class="wrap-ingridient"
+                 class="wrap-ingredient"
             >
                 <div class="sub-label">{{ item.label }}</div>
                 <img :src="'/ingredients/' + index + '.jpg'">
@@ -16,9 +16,9 @@
                     property of their respective owners and are not affiliated with nor do they endorse. These
                     statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure
                     or prevent any disease. Individual results will vary. By using this site you agree to follow the
-                    <nuxt-link to="/">Privacy Policy</nuxt-link>
+                    <nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link>
                     and all
-                    <nuxt-link to="/">Terms & Conditions</nuxt-link>
+                    <nuxt-link to="/terms-and-conditions">Terms & Conditions</nuxt-link>
                     printed on this site. Void Where Prohibited By Law.
                 </p>
             </div>
@@ -44,7 +44,7 @@
             }
         },
         computed: {
-            itemsIngridient() {
+            itemsIngredient() {
                 return this.$store.state.items;
             }
         }
@@ -104,7 +104,7 @@
         text-decoration: underline;
     }
 
-    .wrap-ingridient {
+    .wrap-ingredient {
         display: flex;
         flex-direction: column;
         align-items: center;
