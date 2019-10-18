@@ -27,7 +27,7 @@
                 </div>
                 <div class="prod-info">
                     <p class="prod-name">{{ products[index].label }}</p>
-                    <div class="prod-prise"><span class="prod-prise-grey">{{ cart[0].amount }} X</span> ${{
+                    <div class="prod-prise"><span class="prod-prise-grey">{{ cart[index].amount }} X</span> ${{
                         products[index].prise }}.00
                     </div>
                 </div>
