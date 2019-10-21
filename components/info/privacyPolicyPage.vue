@@ -1,10 +1,10 @@
 <template>
     <section>
-        <h2 class="label">Privacy Policy</h2>
-        <p class="text">THIS WEBSITE AND ALL ASSOCIATED CONTENT AND PRODUCTS ARE OWNED BY:</p>
-        <p class="text">AVG Marketing LLC</p>
-        <p class="text">2515 E Thomas Rd Suite 16-1071 Phoenix, Arizona 85016</p>
-        <p class="text">This Privacy Policy governs your use of this Website and any content, products or services
+        <h2 class="label-info-page">Privacy Policy</h2>
+        <p class="text-info-page">THIS WEBSITE AND ALL ASSOCIATED CONTENT AND PRODUCTS ARE OWNED BY:</p>
+        <p class="text-info-page">AVG Marketing LLC</p>
+        <p class="text-info-page">2515 E Thomas Rd Suite 16-1071 Phoenix, Arizona 85016</p>
+        <p class="text-info-page">This Privacy Policy governs your use of this Website and any content, products or services
             made available from or through this website including any sub domains thereof (“Website”). The Website
             is made available for Streamline Solutions LLC (Hereinafter referred to as “Company”). By visiting this
             Website and requesting information, products or services offered on or through this Website, you agree
@@ -16,8 +16,8 @@
             which govern your use of this Website in general. This Website is intended for users who are located in
             the United States of America. The Privacy Policy shall be interpreted under the laws of the United
             States.</p>
-        <h3 class="sub-label">PURPOSE OF THE PRIVACY POLICY</h3>
-        <p class="text">This Policy describes the information collection, use, and dissemination practices of
+        <h3 class="sub-label-info-page">PURPOSE OF THE PRIVACY POLICY</h3>
+        <p class="text-info-page">This Policy describes the information collection, use, and dissemination practices of
             Company, its parent, subsidiaries and registered d/b/a companies (Collectively Referred herein after as
             “Company”) and all related websites owned or registered to Company. It governs Company’s right to
             collect, use, store and disclose information provided by You on (a) this Website, (b) Company’s other
@@ -25,14 +25,14 @@
             distribution practices, including the acquisition of your information from and to Third Parties. Company
             is not responsible for the information collection or privacy practices of third party websites or
             applications which company does not own or control.</p>
-        <h3 class="sub-label">COLLECTION OF INFORMATION</h3>
-        <h3 class="sub-label">1.1. User Direct Information</h3>
-        <p class="text">Each time you provide or transmit information via the Website, Company may obtain and
+        <h3 class="sub-label-info-page">COLLECTION OF INFORMATION</h3>
+        <h3 class="sub-label-info-page">1.1. User Direct Information</h3>
+        <p class="text-info-page">Each time you provide or transmit information via the Website, Company may obtain and
             collect personal information about you, including, but not limited to, your name, email address, mailing
             address, and telephone or cell phone number (collectively referred to as "Personal Information").</p>
-        <h3 class="sub-label">1.2. Survey Information</h3>
-        <p class="text">Company may collect Personal Information from you when you voluntarily complete a Company
-            survey, order form, or a registration page either online by using the internet or offline by providing
+        <h3 class="sub-label-info-page">1.2. Survey Information</h3>
+        <p class="text-info-page">Company may collect Personal Information from you when you voluntarily complete a Company
+            survey, order form, or a registration info either online by using the internet or offline by providing
             this information through the mail, in person or using a telephone. This information may be collected by
             surveys, order forms, or registration pages operated by third parties. This method of collection is
             collectively known as a “Survey”. In such Surveys, Company or a third party may ask you to provide
@@ -42,8 +42,8 @@
             collect such information concerning you from another source and uses that information in combination
             with information provided from the Website or Surveys. Completing the Surveys is completely voluntary,
             and you are under no obligation to provide Survey Information to Company or a third party.</p>
-        <h3 class="sub-label">1.3. Third Party Information</h3>
-        <p class="text">Company may collect Personal Information from you when you provide information to a third
+        <h3 class="sub-label-info-page">1.3. Third Party Information</h3>
+        <p class="text-info-page">Company may collect Personal Information from you when you provide information to a third
             party and Company subsequently acquires or uses the information provided by the third party. Such
             information may include, but is not limited to, your name, email address, street address, zip code,
             telephone numbers (including cell phone numbers and carriers), birth date, gender, salary range,
@@ -53,17 +53,17 @@
             acquired by Company. If you did not give express permission, or you would like to remove your
             permission, you may suppress all of your information by sending notification to us at
             support@yogurtskincream.com.</p>
-        <h3 class="sub-label">1.4. Other Methods of Collecting Personal Information</h3>
-        <p class="text">Other occasions when Company obtains information from you include: (1) when you claim a
+        <h3 class="sub-label-info-page">1.4. Other Methods of Collecting Personal Information</h3>
+        <p class="text-info-page">Other occasions when Company obtains information from you include: (1) when you claim a
             prize or seek to redeem an offer by Company or by a third party; (2) when you request assistance through
             Company’s customer service department; and (3) when you voluntarily subscribe to a Company service or
             newsletter.</p>
-        <h3 class="sub-label">1.5. Cookies, Web Beacons, and Other Info Collected Using Technology</h3>
-        <p class="text">Company currently uses cookie and web beacon technology to associate certain
+        <h3 class="sub-label-info-page">1.5. Cookies, Web Beacons, and Other Info Collected Using Technology</h3>
+        <p class="text-info-page">Company currently uses cookie and web beacon technology to associate certain
             Internet-related information about you with information about you in its database. Additionally, Company
             may use other new and evolving sources of information in the future.</p>
-        <h3 class="sub-label">a. Cookies</h3>
-        <p class="text">“Cookies” are a feature in your browser software. If enabled, we may write cookies that may
+        <h3 class="sub-label-info-page">a. Cookies</h3>
+        <p class="text-info-page">“Cookies” are a feature in your browser software. If enabled, we may write cookies that may
             store small amounts of data on your computer about your visit to any of the pages of this Site. Cookies
             assist us in tracking which of our features appeal the most to you and what content you may have viewed
             on past visits. When you visit this site again, cookies can enable us to customize our content according
@@ -74,15 +74,15 @@
             can be modified to accept or reject all cookies, or request a notification when a cookie is set. You may
             read more about cookies at https://cookiecentral.com. In order to use all of the features and
             functionality of Company’s websites, you need to accept cookies.</p>
-        <h3 class="sub-label">b. Web Beacons</h3>
-        <p class="text">A web beacon is a programming code that can be used to display an image on a web page, but
+        <h3 class="sub-label-info-page">b. Web Beacons</h3>
+        <p class="text-info-page">A web beacon is a programming code that can be used to display an image on a web info, but
             can also be used to transfer your unique user identification to a database and associate you with
             previously acquired information about an individual in a database. This allows Company to track certain
             websites you visit. Web beacons are used to track online behavioral habits for marketing purposes to
             determine products or services you may be interested in. In addition to using web beacons on web pages,
             Company also uses web beacons in email messages sent to individuals listed in Company’s database.</p>
-        <h3 class="sub-label">c. IP Addresses.</h3>
-        <p class="text">Company automatically tracks certain information based upon your behavior on the site. We
+        <h3 class="sub-label-info-page">c. IP Addresses.</h3>
+        <p class="text-info-page">Company automatically tracks certain information based upon your behavior on the site. We
             may use this information to do internal research on our users' demographics, interests, and behavior to
             better understand, protect and serve you and our community. This information may include the URL that
             you just came from (whether this URL is on the site or not), which URL you next go to (whether this URL
@@ -95,27 +95,27 @@
             Web. Your IP address can, however, reveal what geographic area you are connecting from, or which ISP you
             are using. Finally, other websites you visit have IP addresses, and we may collect the IP addresses of
             those websites and their pages.</p>
-        <h3 class="sub-label">d. Computer Profiles.</h3>
-        <p class="text">Company may also collect and accumulate other anonymous data which will help us understand
+        <h3 class="sub-label-info-page">d. Computer Profiles.</h3>
+        <p class="text-info-page">Company may also collect and accumulate other anonymous data which will help us understand
             and analyze the Internet experience of our visitors. For instance, Company may accumulate visitor data
             relating to referring domain names, the type of browsers used, operating system software, screen
             resolutions, color capabilities, browser plug-ins, language settings, cookie preferences, search engine
             keywords and JavaScript enablement. When you provide us with Personal Identification Information, we are
             able to use such visitor data to identify you.</p>
-        <h3 class="sub-label">e. Data Analysis</h3>
-        <p class="text">Data Analysis technology may be employed from time to time if used by a Client of
+        <h3 class="sub-label-info-page">e. Data Analysis</h3>
+        <p class="text-info-page">Data Analysis technology may be employed from time to time if used by a Client of
             Company.</p>
-        <h3 class="sub-label">f. New Technology</h3>
-        <p class="text">The use of technology on the Internet, including cookies and web beacons, is rapidly
+        <h3 class="sub-label-info-page">f. New Technology</h3>
+        <p class="text-info-page">The use of technology on the Internet, including cookies and web beacons, is rapidly
             developing. As a result, Company strongly encourages individuals to revisit this policy for any updates
             regarding its use of new technology.</p>
-        <h3 class="sub-label">1.6. No Information Collected from Children</h3>
-        <p class="text">Company will never knowingly collect any Personal Information about children under the age
+        <h3 class="sub-label-info-page">1.6. No Information Collected from Children</h3>
+        <p class="text-info-page">Company will never knowingly collect any Personal Information about children under the age
             of 18. If Company obtains actual knowledge that it has collected Personal Information about a child
             under the age of 18, that information will be immediately deleted from its database. Because it does not
             collect such information, Company has no such information to use or to disclose to third parties.</p>
-        <h3 class="sub-label">1.7. Credit Card Information and Bank Account Information</h3>
-        <p class="text">Company may, in certain instances, collect credit card numbers, bank account information and
+        <h3 class="sub-label-info-page">1.7. Credit Card Information and Bank Account Information</h3>
+        <p class="text-info-page">Company may, in certain instances, collect credit card numbers, bank account information and
             related information when an individual places an order on Company’s Website. When the credit card or
             bank account information is submitted to Company, such information is encrypted and is protected with
             SSL encryption software. Company will use the credit card information or bank account information for
@@ -123,15 +123,15 @@
             sell, share, or otherwise disclose this information in any manner other than to fulfill an order placed
             on this website. Such information is stored on a server which has firewall protection and password
             coded. Company limits access to this information to authorized personnel only.</p>
-        <h3 class="sub-label">2. USE OF PERSONAL INFORMATION</h3>
-        <h3 class="sub-label">2.1. General Use</h3>
-        <p class="text">The following paragraphs describe how Company currently uses Personal Information, but
+        <h3 class="sub-label-info-page">2. USE OF PERSONAL INFORMATION</h3>
+        <h3 class="sub-label-info-page">2.1. General Use</h3>
+        <p class="text-info-page">The following paragraphs describe how Company currently uses Personal Information, but
             Company may change or broaden its use at any time. As noted below, Company may update this policy from
             time to time. Company may use Personal Information to provide promotional offers to individuals by means
             of email advertising, telephone marketing, direct mail marketing, mobile marketing, online banner
             advertising, and package stuffers, among other possible uses.</p>
-        <h3 class="sub-label">2.2</h3>
-        <p class="text">Company may maintain separate email lists for different purposes. If email recipients wish
+        <h3 class="sub-label-info-page">2.2</h3>
+        <p class="text-info-page">Company may maintain separate email lists for different purposes. If email recipients wish
             to end their email subscription from a particular list, they need to follow the instructions at the end
             of each email message to unsubscribe from the particular list. You may always unsubscribe from receiving
             email communications from us. To unsubscribe from all Company emails, email customer service with
@@ -139,23 +139,23 @@
             database at support@yogurtskincream.com, or contact us at 1 833-496-2313, Monday to Friday, 08:00 AM –
             07:00 PM PST, Closed on holidays Company's unsubscribe process impacts only the future delivery of
             electronic mailings disseminated by Company on its own behalf.</p>
-        <h3 class="sub-label">2.3. Targeted Advertising</h3>
-        <p class="text">Company may use Personal Information to target advertising to an individual. When an
+        <h3 class="sub-label-info-page">2.3. Targeted Advertising</h3>
+        <p class="text-info-page">Company may use Personal Information to target advertising to an individual. When an
             individual is using the Internet, Company uses Technology Information to associate an individual with
             that person's Personal Information, and Company attempts to show advertising for products and services
             in which the person has expressed an interest in the Surveys, indicated an interest by means of
             Technology Information, and otherwise. Company may, at its discretion, target advertising by using
             email, direct mail, telephones, cell phones, and other means of communication to provide promotional
             offers.</p>
-        <h3 class="sub-label">2.4. Wireless Addresses</h3>
-        <p class="text">If the e-mail address you provide to Company is a wireless e-mail address, you agree to
+        <h3 class="sub-label-info-page">2.4. Wireless Addresses</h3>
+        <p class="text-info-page">If the e-mail address you provide to Company is a wireless e-mail address, you agree to
             receive messages at such address from Company (unless and until you have elected not to receive such
             messages by following the instructions in the unsubscribe portion of this policy). You understand that
             your wireless carrier's standard rates apply to these messages. You represent that you are the owner or
             authorized user of the wireless device on which messages will be received, and that you are authorized
             to approve the applicable charges.</p>
-        <h3 class="sub-label">2.5. Short Message Service</h3>
-        <p class="text">Company may make available a service through which you can receive messages on your wireless
+        <h3 class="sub-label-info-page">2.5. Short Message Service</h3>
+        <p class="text-info-page">Company may make available a service through which you can receive messages on your wireless
             device via short message service (“SMS Service”). Data obtained from you in connection with this SMS
             service may include your name, address, cell phone number, your provider's name, and the date, time, and
             content of your messages. You represent that you are 18 years of age and the owner or authorized user of
@@ -170,47 +170,47 @@
             wireless account invoice, we may provide your carrier with your applicable information in connection
             therewith. Your wireless carrier and other service providers may also collect data about your wireless
             device usage, and their practices are governed by their own policies.</p>
-        <p class="text">You acknowledge and agree that the SMS Service is provided via wireless systems which use
+        <p class="text-info-page">You acknowledge and agree that the SMS Service is provided via wireless systems which use
             radios (and other means) to transmit communications over complex networks. We do not guarantee that your
             use of the SMS Service will be private or secure, and we are not liable to you for any lack of privacy
             or security you may experience. You are fully responsible for taking precautions and providing security
             measures best suited for your situation and intended use of the SMS Service. We may also access the
             content of your account and wireless account with your carrier for the purpose of identifying and
             resolving technical problems and service-related complaints.</p>
-        <p class="text">You may remove your information from Company’s database. You may remove your information by
+        <p class="text-info-page">You may remove your information from Company’s database. You may remove your information by
             sending your request in writing via email to support@yogurtskincream.com or by sending "STOP", "END",
             "QUIT" to the SMS text message you have received.</p>
-        <h3 class="sub-label">2.6. Use of Technology Information</h3>
-        <p class="text">Company may use Technology Information (1) to match a person's Personal Information and
+        <h3 class="sub-label-info-page">2.6. Use of Technology Information</h3>
+        <p class="text-info-page">Company may use Technology Information (1) to match a person's Personal Information and
             Third Party List Information to other categories of Personal Information to make and improve profiles of
             individuals, (2) to track a person's online browsing habits on the Internet, (3) to determine which
             areas of Company's websites are most frequently visited. This information helps Company to better
             understand the online habits of individuals so that Company can target advertising and promotions to
             them.</p>
-        <h3 class="sub-label">2.7. Profiles of Individuals</h3>
-        <p class="text">Company may use Personal Information to make a profile of an individual. A profile can be
+        <h3 class="sub-label-info-page">2.7. Profiles of Individuals</h3>
+        <p class="text-info-page">Company may use Personal Information to make a profile of an individual. A profile can be
             created by combining Survey Information and Third Party List Information with other sources of Personal
             Information such as information obtained from public databases.</p>
-        <h3 class="sub-label">2.8. Storage of Personal Information</h3>
-        <p class="text">Company stores the Personal Information in a database on its computers. Company computers
+        <h3 class="sub-label-info-page">2.8. Storage of Personal Information</h3>
+        <p class="text-info-page">Company stores the Personal Information in a database on its computers. Company computers
             have security measures (such as a firewall and password protections) in place to protect against the
             loss, misuse, and alteration of the information under Company’s control. Notwithstanding such measures,
             Company cannot guarantee that its security measures will prevent its computers from being illegally
             accessed, and the Personal Information on them stolen or altered.</p>
-        <h3 class="sub-label">2.9. Other Use of Personal Information</h3>
-        <p class="text">Company may use your Personal Information in the following ways:</p>
-        <h3 class="sub-label">2.10. Data Summary</h3>
-        <p class="text">Company may sell or transfer non-individualized information, such as summary or aggregated
+        <h3 class="sub-label-info-page">2.9. Other Use of Personal Information</h3>
+        <p class="text-info-page">Company may use your Personal Information in the following ways:</p>
+        <h3 class="sub-label-info-page">2.10. Data Summary</h3>
+        <p class="text-info-page">Company may sell or transfer non-individualized information, such as summary or aggregated
             anonymous information about all persons or sub-groups of persons.</p>
-        <h3 class="sub-label">3. SERVICE PROVIDERS</h3>
-        <p class="text">Company may use third parties to help operate our Website and deliver products and
+        <h3 class="sub-label-info-page">3. SERVICE PROVIDERS</h3>
+        <p class="text-info-page">Company may use third parties to help operate our Website and deliver products and
             services.</p>
-        <h3 class="sub-label">3.1. Aggregate Statistics</h3>
-        <p class="text">Company may disclose aggregate statistics regarding user behavior as a measure of interest
+        <h3 class="sub-label-info-page">3.1. Aggregate Statistics</h3>
+        <p class="text-info-page">Company may disclose aggregate statistics regarding user behavior as a measure of interest
             in, and use of, our Website and e-mails to third parties in the form of aggregate data, such as overall
             patterns or demographic reports that do not describe or identify any individual user.</p>
-        <h3 class="sub-label">3.2. Complying with Legal Process</h3>
-        <p class="text">Company will use or disclose your Personal Information in response to subpoenas, court
+        <h3 class="sub-label-info-page">3.2. Complying with Legal Process</h3>
+        <p class="text-info-page">Company will use or disclose your Personal Information in response to subpoenas, court
             orders, warrants, or legal process, or to otherwise establish or exercise our legal rights or defend
             against legal claims or in the event you violate or breach an agreement with Company. Company will use
             and disclose your Personal Information if we believe you will harm the property or rights of Company,
@@ -219,17 +219,17 @@
             action regarding illegal activities, suspected fraud, situations involving potential threats to the
             physical safety of any person, violations of Company’s acceptable use policy, or as otherwise required
             by law when responding to subpoenas, court orders and other legal processes.</p>
-        <h3 class="sub-label">3.3. Order Fulfillment</h3>
-        <p class="text">Company will transfer your Personal Information to third parties when necessary to provide
+        <h3 class="sub-label-info-page">3.3. Order Fulfillment</h3>
+        <p class="text-info-page">Company will transfer your Personal Information to third parties when necessary to provide
             fulfillment of a product or service that you order from such third party while using Company’s websites
             or when responding to offers provided by Company.</p>
-        <h3 class="sub-label">3.4. Foreign use of the Website</h3>
-        <p class="text">To the extent that you are accessing the Website while domiciled outside of the United
+        <h3 class="sub-label-info-page">3.4. Foreign use of the Website</h3>
+        <p class="text-info-page">To the extent that you are accessing the Website while domiciled outside of the United
             States, you acknowledge that the Personal Information you are providing Company is collected and stored
             in the United States and therefore consent to the transfer of information to and storage of the
             information outside of your domiciled country and in the United States.</p>
-        <h3 class="sub-label">3.5. California User Consumer Rights</h3>
-        <p class="text">In accordance with California Civil Code Sec. 1789.3, California resident users are entitled
+        <h3 class="sub-label-info-page">3.5. California User Consumer Rights</h3>
+        <p class="text-info-page">In accordance with California Civil Code Sec. 1789.3, California resident users are entitled
             to know that they may file grievances and complaints with California Department of Consumer Affairs, 400
             R Street, STE 1080, Sacramento, CA 95814; or by phone at 888-406-0993; or by email to dca@dca.ca.gov.
             For more information about protecting your privacy, you may wish to visit: https://www.ftc.gov. If you
@@ -239,10 +239,6 @@
 
 <script>
     export default {
-        name: "privacyPolicy"
+        name: "privacyPolicyPage"
     }
 </script>
-
-<style scoped>
-
-</style>

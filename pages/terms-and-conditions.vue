@@ -1,17 +1,17 @@
 <template>
-    <section class="block">
+    <section class="block-info-page">
         <b-container>
             <b-breadcrumb :items="items"></b-breadcrumb>
-            <terms-and-conditions />
+            <terms-and-conditions-page />
         </b-container>
     </section>
 </template>
 
 <script>
-    import termsAndConditions from "../components/page/termsAndConditions";
+    import termsAndConditionsPage from "../components/info/termsAndConditionsPage";
 
     export default {
-        components: {termsAndConditions},
+        components: {termsAndConditionsPage},
         name: "terms-and-conditions",
         data() {
             return {
@@ -32,8 +32,8 @@
 
 </script>
 
-<style scoped>
-    .block {
+<style>
+    .block-info-page {
         background-color: #f7cac9;
         min-height: 400px;
         padding-bottom: 20px;
@@ -51,7 +51,7 @@
         text-decoration: none;
     }
 
-    .label {
+    .label-info-page {
         text-align: left;
         text-transform: uppercase;
         font-weight: 700;
@@ -59,14 +59,14 @@
         margin-bottom: 40px;
     }
 
-    .sub-label {
+    .sub-label-info-page {
         text-align: left;
         font-weight: 600;
         font-size: 12px;
         margin-top: 30px;
     }
 
-    .text {
+    .text-info-page {
         line-height: 24px;
         font-size: 12px;
         margin-bottom: 6px;

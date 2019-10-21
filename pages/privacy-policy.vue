@@ -1,17 +1,17 @@
 <template>
-    <section class="block">
+    <section class="block-info-page">
         <b-container>
             <b-breadcrumb :items="items"></b-breadcrumb>
-            <privacy-policy />
+            <privacy-policy-page />
         </b-container>
     </section>
 </template>
 
 <script>
-    import privacyPolicy from "../components/page/privacyPolicy";
+    import privacyPolicyPage from "../components/info/privacyPolicyPage";
 
     export default {
-        components: {privacyPolicy},
+        components: {privacyPolicyPage},
         name: "privacy-policy",
         data() {
             return {
@@ -32,8 +32,8 @@
 
 </script>
 
-<style scoped>
-    .block {
+<style>
+    .block-info-page {
         background-color: #f7cac9;
         min-height: 400px;
         padding-bottom: 20px;
@@ -51,7 +51,7 @@
         text-decoration: none;
     }
 
-    .label {
+    .label-info-page {
         text-align: left;
         text-transform: uppercase;
         font-weight: 700;
@@ -59,14 +59,14 @@
         margin-bottom: 40px;
     }
 
-    .sub-label {
+    .sub-label-info-page {
         text-align: left;
         font-weight: 600;
         font-size: 12px;
         margin-top: 30px;
     }
 
-    .text {
+    .text-info-page {
         font-size: 12px;
         margin-bottom: 6px;
     }

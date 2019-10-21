@@ -2,7 +2,7 @@
 module.exports = {
   mode: 'universal',
   /*
-  ** Headers of the page
+  ** Headers of the info
   */
   head: {
     title: process.env.npm_package_name || '',
