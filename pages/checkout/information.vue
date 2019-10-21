@@ -6,8 +6,8 @@
 
 <script>
     export default {
-        name: "stage1",
-        layout: 'checkout'
+        layout: 'checkout',
+        name: "information"
     }
 </script>
 

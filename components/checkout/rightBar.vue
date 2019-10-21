@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <section>
         <div class="list">
             <div class="list-item"
                  v-for="(elem, index) in cart"
@@ -20,7 +20,7 @@
             <div class="total-top-item"><span>Shipping</span><span>Free</span></div>
         </div>
         <div class="total-bottom">Total <span class="total-usd">usd <span class="total-bottom-prise">${{ totalPrice }}.00</span></span></div>
-    </div>
+    </section>
 </template>
 
 <script>
