@@ -1,7 +1,10 @@
 <template>
     <section>
         <h2>Contact information</h2>
-        <custom-input nameInput="email" placeholderInput="Email or mobile phone number" />
+        <custom-input nameInput="email"
+                      type="email"
+                      placeholderInput="Email or mobile phone number"
+                      invalidText="Enter a valid email or a mobile phone number"/>
     </section>
 </template>
 
