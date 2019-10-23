@@ -86,7 +86,7 @@
 
     .input-elem {
         display: block;
-        width: 100%;
+        max-width: 95%;
         border: none;
         background: transparent;
         position: absolute;

@@ -50,7 +50,7 @@
             </div>
             <div class="wrap-input">
                 <custom-select nameSelect="states"
-                               labelSelect="States"
+                               labelSelect="State"
                                :valueSelect="states"/>
             </div>
             <div class="wrap-input">
