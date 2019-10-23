@@ -38,7 +38,7 @@
         },
         beforeUpdate() {
             if (this.type === 'email') {
-                this.validInput = !/\b@\b/.test(this.inputValue)
+                this.validInput = !/\b@\b/.test(this.inputValue) && !/^(\d){1,13}$/.test(this.inputValue)
             }
         }
     }
@@ -101,7 +101,7 @@
         border: 1px solid #ff6d6d;
         box-shadow: 0 0 0 1px #ff6d6d;
     }
-    
+
     .textSpan {
         display: none;
     }
