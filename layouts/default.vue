@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="default">
         <custom-header/>
         <custom-header-sticky/>
         <nuxt/>
@@ -21,5 +21,7 @@
 </script>
 
 <style>
-
+    .default {
+        font-family: Poppins, "Arial", "sans-serif";
+    }
 </style>

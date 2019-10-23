@@ -32,6 +32,8 @@
         align-items: center;
         cursor: pointer;
         font-size: 14px;
+        font-weight: 400;
+        color: #545454;
     }
 
     .custom-checkbox + .checkbox-label span {

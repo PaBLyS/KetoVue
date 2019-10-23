@@ -76,8 +76,8 @@
 </script>
 
 <style scoped>
-    body {
-        font-family: -apple-system, sans-serif;
+    .layout {
+        font-family: 'Segoe UI', sans-serif;
     }
 
     .breadcrumb {
