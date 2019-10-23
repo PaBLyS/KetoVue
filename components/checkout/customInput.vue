@@ -44,7 +44,7 @@
                 this.validInput = !/^[a-zA-Z]+$/.test(this.inputValue)
             }
             else if (this.type === 'text' && this.nameInput === 'address') {
-                this.validInput = !/^[a-zA-Z]+$/.test(this.inputValue)
+                this.validInput = !/^[a-zA-Z0-9 ,]+$/.test(this.inputValue)
             }
             else if (this.nameInput === 'zipCode') {
                 this.validInput = !/^(\d){1,5}$/.test(this.inputValue)
