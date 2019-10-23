@@ -5,16 +5,20 @@
                       type="email"
                       placeholderInput="Email or mobile phone number"
                       invalidText="Enter a valid email or a mobile phone number"/>
+        <custom-checkbox nameCheckbox="news"
+                         textCheckbox="Keep me up to date on news and exclusive offers"/>
+        <h2>Shipping address</h2>
     </section>
 </template>
 
 <script>
     import customInput from "../../components/checkout/customInput";
+    import customCheckbox from "../../components/checkout/customCheckbox";
 
     export default {
         layout: 'checkout',
         name: "information",
-        components: {customInput}
+        components: {customCheckbox, customInput}
     }
 </script>
 
