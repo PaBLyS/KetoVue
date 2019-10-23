@@ -40,6 +40,13 @@
             if (this.type === 'email') {
                 this.validInput = !/\b@\b/.test(this.inputValue) && !/^(\d){1,13}$/.test(this.inputValue)
             }
+            else if (this.type === 'text' && this.nameInput === 'lastName') {
+                this.validInput = !/^[a-zA-Z]+$/.test(this.inputValue)
+            }
+            else if (this.type === 'text' && this.nameInput === 'address') {
+                this.validInput = !/^[a-zA-Z]+$/.test(this.inputValue)
+            }
+            else return false
         }
     }
 </script>
