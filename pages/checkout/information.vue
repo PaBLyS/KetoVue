@@ -9,7 +9,6 @@
             <custom-checkbox nameCheckbox="news"
                              textCheckbox="Keep me up to date on news and exclusive offers"/>
         </div>
-        <div style="height: 19px"></div>
         <h2 class="form-label">Shipping address</h2>
         <div style="display:flex">
             <div class="wrap-input">
