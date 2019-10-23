@@ -1,12 +1,53 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=devanagari,latin-ext');
 
 @font-face {
-    font-family: 'segoe';
-    src: url('/assets/Segoe UI.ttf');
+    font-family: "SegoeUIRegular";
+    src: url("/assets/fonts/SegoeUIRegular/SegoeUIRegular.eot");
+    src: url("/assets/fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
+    url("/assets/fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"),
+    url("/assets/fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
 
-body {
-    font-family: Poppins, "Arial", "sans-serif";
+@font-face {
+    font-family: "SegoeUIBold";
+    src: url("/assets/fonts/SegoeUIBold/SegoeUIBold.eot");
+    src: url("/assets/fonts/SegoeUIBold/SegoeUIBold.eot?#iefix")format("embedded-opentype"),
+    url("/assets/fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"),
+    url("/assets/fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SegoeUIItalic";
+    src: url("/assets/fonts/SegoeUIItalic/SegoeUIItalic.eot");
+    src: url("/assets/fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix")format("embedded-opentype"),
+    url("/assets/fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"),
+    url("/assets/fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SegoeUILight";
+    src: url("/assets/fonts/SegoeUILight/SegoeUILight.eot");
+    src: url("/assets/fonts/SegoeUILight/SegoeUILight.eot?#iefix")format("embedded-opentype"),
+    url("/assets/fonts/SegoeUILight/SegoeUILight.woff") format("woff"),
+    url("/assets/fonts/SegoeUILight/SegoeUILight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SegoeUISemiBold";
+    src: url("/assets/fonts/SegoeUISemiBold/SegoeUISemiBold.eot");
+    src: url("/assets/fonts/SegoeUISemiBold/SegoeUISemiBold.eot?#iefix")format("embedded-opentype"),
+    url("/assets/fonts/SegoeUISemiBold/SegoeUISemiBold.woff") format("woff"),
+    url("/assets/fonts/SegoeUISemiBold/SegoeUISemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 a,
