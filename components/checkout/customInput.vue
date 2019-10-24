@@ -28,7 +28,7 @@
         },
         data() {
             return {
-                inputValue: '',
+                inputValue: this.$store.state.shipping[this.nameInput],
                 validInput: false
             }
         },

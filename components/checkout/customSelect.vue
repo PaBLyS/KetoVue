@@ -27,7 +27,7 @@
         },
         data() {
             return {
-                optionSelect: ''
+                optionSelect: this.$store.state.shipping[this.nameSelect]
             }
         },
         methods: {

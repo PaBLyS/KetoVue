@@ -67,7 +67,7 @@
                             .
                         </label>
                     </p>
-                    <button class="sub-button">proceed to checkout</button>
+                    <button @click="goToCheckout" class="sub-button">proceed to checkout</button>
                 </div>
             </b-row>
             <b-row class="clear"
@@ -142,6 +142,9 @@
                 let elemId = 'quantity' + id;
                 let amountItem = document.getElementById(elemId).value;
                 this.$store.commit('changeQuantity', {quantity: amountItem, id: id});
+            },
+            goToCheckout() {
+                this.$router.push({path: '/checkout/information'});
             }
         }
     }
