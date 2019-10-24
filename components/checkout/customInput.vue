@@ -10,6 +10,7 @@
                    :id="nameInput"
                    :class="['input-elem', {'inputClear': statusInput}]"
                    v-model="inputValue"
+                   @input="upDate(inputValue)"
             >
         </div>
         <div :class="['textSpan', {'validSpan': validInput}]">{{invalidText}}</div>
@@ -34,6 +35,11 @@
         computed: {
             statusInput() {
                 return this.inputValue === '' ? true : false;
+            }
+        },
+        methods: {
+            upDate(value) {
+                this.$store.commit('editShipping', {value: value, param: this.nameInput});
             }
         },
         beforeUpdate() {

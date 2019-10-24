@@ -6,9 +6,11 @@
         </label>
         <select :name="nameSelect"
                 :id="nameSelect"
-                class="select">
+                class="select"
+                v-model="optionSelect"
+                @change="upDate()">
             <option v-for="elem in valueSelect"
-                    value="elem">
+                    :value="elem">
                 {{elem}}
             </option>
         </select>
@@ -25,9 +27,14 @@
         },
         data() {
             return {
-
+                optionSelect: ''
             }
-        }
+        },
+        methods: {
+            upDate() {
+                this.$store.commit('editShipping', {value: this.optionSelect, param: this.nameSelect});
+            }
+        },
     }
 </script>
 
@@ -59,7 +66,7 @@
 
     .select:hover,
     .select:active,
-    .select:focus{
+    .select:focus {
         outline: none;
     }
 </style>

@@ -69,8 +69,15 @@
                     }
                 ],
                 ppStatus: false,
-                tacStatus: false
+                tacStatus: false,
+                info: {
+                    email: '',
+                    firstName: ''
+                }
             }
+        },
+        beforeCreate() {
+            this.$store.commit('clearShipping');
         }
     }
 </script>

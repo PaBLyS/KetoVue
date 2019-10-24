@@ -34,7 +34,18 @@ export const state = () => ({
         {
             id: 2,
             amount: 0
-        }]
+        }],
+    shipping: {
+        email: '',
+        firstName: '',
+        lastName: '',
+        address: '',
+        address2: '',
+        city: '',
+        country: '',
+        states: '',
+        zipCode: ''
+    }
 });
 
 export const mutations = {
@@ -46,5 +57,21 @@ export const mutations = {
     },
     deleteItem(state, id) {
         state.cart[id].amount = 0;
+    },
+    clearShipping(state) {
+        state.shipping = {
+            email: '',
+            firstName: '',
+            lastName: '',
+            address: '',
+            address2: '',
+            city: '',
+            country: '',
+            states: '',
+            zipCode: ''
+        };
+    },
+    editShipping(state, obj) {
+        state.shipping[obj.param] = obj.value;
     }
 };
