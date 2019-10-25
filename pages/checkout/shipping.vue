@@ -22,10 +22,10 @@
         <h2 class="form-label">Shipping method</h2>
         <div class="wrap-info">
             <div class="wrap-info-line">
-               <div style="display:flex; align-items: center;">
-                   <div class="circle"></div>
-                   <span>USPS - First Class Package</span>
-               </div>
+                <div style="display:flex; align-items: center;">
+                    <div class="circle"></div>
+                    <span>USPS - First Class Package</span>
+                </div>
                 <div>
                     Free
                 </div>

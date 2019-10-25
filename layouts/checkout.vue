@@ -120,10 +120,10 @@
         position: relative;
     }
 
-    .left-brand:hover{
+    .left-brand:hover {
         text-decoration: none;
     }
-    
+
     .wrap-footer {
         position: absolute;
         bottom: 0;
