@@ -22,6 +22,8 @@ export const state = () => ({
             prise: 59,
             description: 'lorem ipsum'
         }],
+
+//--------------- Don`t change ---------------
     cart: [
         {
             id: 0,
