@@ -84,7 +84,7 @@
 
 <style scoped>
     .layout {
-        font-family: 'Segoe UI', sans-serif;
+        font-family: 'SegoeUIRegular', sans-serif;
     }
 
     .breadcrumb {

@@ -10,6 +10,7 @@
                    :id="nameInput"
                    :class="['input-elem', {'inputClear': statusInput}]"
                    v-model="inputValue"
+                   v-mask="pattern"
                    @input="upDate(inputValue)"
             >
         </div>
@@ -18,8 +19,13 @@
 </template>
 
 <script>
+    import Vue from 'vue'
+    import VueMask from 'v-mask'
+
+    Vue.use(VueMask);
+
     export default {
-        name: "customInput",
+        name: "customInputData",
         props: {
             nameInput: String,
             placeholderInput: String,
@@ -29,7 +35,8 @@
         data() {
             return {
                 inputValue: this.$store.state.shipping[this.nameInput],
-                validInput: false
+                validInput: false,
+                pattern: ''
             }
         },
         computed: {
@@ -43,22 +50,9 @@
             }
         },
         beforeUpdate() {
-            if (this.type === 'email') {
-                this.validInput = !/\b@\b/.test(this.inputValue) && !/^(\d){1,13}$/.test(this.inputValue)
-            } else if (this.type === 'text' && this.nameInput === 'lastName') {
-                this.validInput = !/^[a-zA-Z]+$/.test(this.inputValue)
-            } else if (this.type === 'text' && this.nameInput === 'address') {
-                this.validInput = !/^[a-zA-Z0-9 ,]+$/.test(this.inputValue)
-            } else if (this.type === 'text' && this.nameInput === 'address2') {
-                this.validInput = !/^[a-zA-Z0-9 ,]+$/.test(this.inputValue)
-            } else if (this.nameInput === 'zipCode') {
-                this.validInput = !/^(\d){1,5}$/.test(this.inputValue)
-            } else if (this.nameInput === 'cardNumber') {
-                this.validInput = !/^(\d){12,19}$/.test(this.inputValue)
-            } else if (this.nameInput === 'cardName') {
-                this.validInput = !/^[a-zA-Z]+$/.test(this.inputValue)
-            } else if (this.nameInput === 'cardCode') {
-                this.validInput = !/^(\d){2,4}$/.test(this.inputValue)
+            if (this.nameInput === 'cardData') {
+                this.pattern = '##/####';
+                this.validInput = !/^(\d||\/){1,7}$/.test(this.inputValue)
             } else return false
         }
     }

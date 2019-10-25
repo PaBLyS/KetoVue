@@ -109,6 +109,6 @@
     .form-label {
         margin: 21px 6px;
         font-size: 18px;
-        font-weight: 300;
+        font-weight: 400;
     }
 </style>
