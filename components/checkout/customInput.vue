@@ -56,7 +56,7 @@
             } else if (this.nameInput === 'cardNumber') {
                 this.validInput = !/^(\d){12,19}$/.test(this.inputValue)
             } else if (this.nameInput === 'cardName') {
-                this.validInput = !/^[a-zA-Z]+$/.test(this.inputValue)
+                this.validInput = !/^[a-zA-Z ]+$/.test(this.inputValue)
             } else if (this.nameInput === 'cardCode') {
                 this.validInput = !/^(\d){2,4}$/.test(this.inputValue)
             } else return false
