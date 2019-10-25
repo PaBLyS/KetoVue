@@ -39,12 +39,12 @@
                     <div class="total-prise">${{ totalPrice }}.00</div>
                 </div>
                 <div class="button-wrap">
-                    <div class="button button-check">
+                    <nuxt-link to="/checkout/information" class="button button-check">
                         check out
-                    </div>
-                    <div class="button button-view">
+                    </nuxt-link>
+                    <nuxt-link to="/cart" class="button button-view">
                         view cart
-                    </div>
+                    </nuxt-link>
                 </div>
             </li>
             <li class="hover-item last" v-else>
@@ -211,6 +211,11 @@
         padding: 0;
     }
 
+    .button-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
     .button {
         width: 100%;
         text-transform: uppercase;
@@ -221,6 +226,10 @@
         margin-bottom: 10px;
         transition: all .2s ease-in;
         cursor: pointer;
+    }
+    
+    .button:hover{
+        text-decoration: none;
     }
 
     .button-check {
