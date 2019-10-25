@@ -75,7 +75,7 @@
     }
 
     .info-label {
-        width: 80px;
+        min-width: 80px;
     }
 
     .form-label {

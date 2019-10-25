@@ -102,8 +102,14 @@ a:focus{
     border-radius: 5px;
 }
 
+.button-back:hover{
+    color: #1b1b1b;
+    text-decoration: none;
+}
+
 .button-next:hover{
     text-decoration: none;
+    color: #fff;
 }
 
 .button-back {
@@ -112,10 +118,6 @@ a:focus{
     font-weight: 400;
     position: relative;
     padding-left: 10px;
-}
-
-.button-back:hover {
-    text-decoration: none;
 }
 
 .button-back:after {
