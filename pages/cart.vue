@@ -144,6 +144,7 @@
                 this.$store.commit('changeQuantity', {quantity: amountItem, id: id});
             },
             goToCheckout() {
+                this.$store.commit('clearShipping');
                 this.$router.push({path: '/checkout/information'});
             }
         }

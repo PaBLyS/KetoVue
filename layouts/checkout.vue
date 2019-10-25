@@ -75,9 +75,6 @@
                     firstName: ''
                 }
             }
-        },
-        beforeCreate() {
-            this.$store.commit('clearShipping');
         }
     }
 </script>

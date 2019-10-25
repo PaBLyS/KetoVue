@@ -39,9 +39,9 @@
                     <div class="total-prise">${{ totalPrice }}.00</div>
                 </div>
                 <div class="button-wrap">
-                    <nuxt-link to="/checkout/information" class="button button-check">
+                    <button @click="goToCheckOut" class="button button-check">
                         check out
-                    </nuxt-link>
+                    </button>
                     <nuxt-link to="/cart" class="button button-view">
                         view cart
                     </nuxt-link>
@@ -91,8 +91,11 @@
         },
         methods: {
             goToCart() {
-                this.transition = 'slide';
                 this.$router.push({path: '/cart'});
+            },
+            goToCheckOut() {
+                this.$store.commit('clearShipping');
+                this.$router.push({path: '/checkout/information'});
             },
             deleteItem(id) {
                 this.$store.commit('deleteItem', id);
@@ -235,6 +238,7 @@
     .button-check {
         background: #e95144;
         color: #fff;
+        border: none;
     }
 
     .button-check:hover {
