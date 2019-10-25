@@ -92,7 +92,7 @@
 
     .input-elem {
         display: block;
-        max-width: 95%;
+        width: 90%;
         border: none;
         background: transparent;
         position: absolute;
