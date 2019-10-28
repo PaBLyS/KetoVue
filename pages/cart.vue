@@ -57,6 +57,10 @@
                         <span>Additional comments</span>
                     </div>
                     <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <p class="order-text">This website is owned, maintained and issued by Smart Logistics, a U.S.
+                        domiciled corporation, incorporated in NC. All communications to Yogurt  Skin Cream through this
+                        site, or any form thereon, are communications to Yogurt Skin Cream in the U.S. All charges on
+                        your bank statement will read: yogurtskincream.com</p>
                     <p class="check">
                         <input style="display: none" class="check-input" type="checkbox" id="agree"/>
                         <label class="check-label" for="agree">
@@ -144,8 +148,11 @@
                 this.$store.commit('changeQuantity', {quantity: amountItem, id: id});
             },
             goToCheckout() {
-                this.$store.commit('clearShipping');
-                this.$router.push({path: '/checkout/information'});
+                if (document.getElementById('agree').checked) {
+                    this.$store.commit('clearShipping');
+                    this.$router.push({path: '/checkout/information'});
+                }
+                else alert("You must agree with the terms and conditions of sales to check out.");
             }
         }
     }
@@ -489,5 +496,10 @@
     .clear-second a:hover {
         text-decoration: none;
         color: #232323;
+    }
+
+    .order-text {
+        font-size: 12px;
+        line-height: 16px;
     }
 </style>
