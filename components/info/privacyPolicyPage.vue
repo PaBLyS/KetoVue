@@ -2,8 +2,8 @@
     <section>
         <h2 class="label-info-page">Privacy Policy</h2>
         <p class="text-info-page">THIS WEBSITE AND ALL ASSOCIATED CONTENT AND PRODUCTS ARE OWNED BY:</p>
-        <p class="text-info-page">AVG Marketing LLC</p>
-        <p class="text-info-page">2515 E Thomas Rd Suite 16-1071 Phoenix, Arizona 85016</p>
+        <p class="text-info-page">{{config.nameCorp}}</p>
+        <p class="text-info-page">{{config.addressCorp}}</p>
         <p class="text-info-page">This Privacy Policy governs your use of this Website and any content, products or services
             made available from or through this website including any sub domains thereof (“Website”). The Website
             is made available for Streamline Solutions LLC (Hereinafter referred to as “Company”). By visiting this
@@ -52,7 +52,7 @@
             Company seeks assurances from the third party that you agreed to provide and have such information
             acquired by Company. If you did not give express permission, or you would like to remove your
             permission, you may suppress all of your information by sending notification to us at
-            support@yogurtskincream.com.</p>
+            support@{{config.linkCorp}}.</p>
         <h3 class="sub-label-info-page">1.4. Other Methods of Collecting Personal Information</h3>
         <p class="text-info-page">Other occasions when Company obtains information from you include: (1) when you claim a
             prize or seek to redeem an offer by Company or by a third party; (2) when you request assistance through
@@ -136,7 +136,7 @@
             of each email message to unsubscribe from the particular list. You may always unsubscribe from receiving
             email communications from us. To unsubscribe from all Company emails, email customer service with
             subject line "UNSUBSCRIBE EMAILS" and submit the e-mail address that you desire to be removed from our
-            database at support@yogurtskincream.com, or contact us at 1 833-496-2313, Monday to Friday, 08:00 AM –
+            database at support@{{config.linkCorp}}, or contact us at {{config.phoneCorp}}, Monday to Friday, 08:00 AM –
             07:00 PM PST, Closed on holidays Company's unsubscribe process impacts only the future delivery of
             electronic mailings disseminated by Company on its own behalf.</p>
         <h3 class="sub-label-info-page">2.3. Targeted Advertising</h3>
@@ -178,7 +178,7 @@
             content of your account and wireless account with your carrier for the purpose of identifying and
             resolving technical problems and service-related complaints.</p>
         <p class="text-info-page">You may remove your information from Company’s database. You may remove your information by
-            sending your request in writing via email to support@yogurtskincream.com or by sending "STOP", "END",
+            sending your request in writing via email to support@{{config.linkCorp}} or by sending "STOP", "END",
             "QUIT" to the SMS text message you have received.</p>
         <h3 class="sub-label-info-page">2.6. Use of Technology Information</h3>
         <p class="text-info-page">Company may use Technology Information (1) to match a person's Personal Information and
@@ -233,12 +233,17 @@
             to know that they may file grievances and complaints with California Department of Consumer Affairs, 400
             R Street, STE 1080, Sacramento, CA 95814; or by phone at 888-406-0993; or by email to dca@dca.ca.gov.
             For more information about protecting your privacy, you may wish to visit: https://www.ftc.gov. If you
-            have questions about this policy, please contact us at support@yogurtskincream.com.</p>
+            have questions about this policy, please contact us at support@{{config.linkCorp}}.</p>
     </section>
 </template>
 
 <script>
     export default {
-        name: "privacyPolicyPage"
+        name: "privacyPolicyPage",
+        data() {
+            return {
+                config: this.$store.state.corpInfo
+            }
+        }
     }
 </script>

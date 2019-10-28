@@ -15,21 +15,20 @@
             diagnose, treat, cure or prevent any disease. Individual weight loss results will vary. By using this
             site, you agree to follow the Privacy Policy and all Terms & Conditions printed on this site. Void Where
             Prohibited by Law.</p>
-        <h3 class="sub-label-info-page">Yogurt Skin Cream</h3>
-        <p class="text-info-page">Email: support@yogurtskincream.com</p>
-        <p class="text-info-page">Toll Free Customer Service phone: +1 833-799-7853</p>
-        <p class="text-info-page">All charges on your bank statement will read: Yogurt Skin Cream</p>
+        <h3 class="sub-label-info-page">{{config.corpInfo.brandName}}</h3>
+        <p class="text-info-page">Email: support@{{config.corpInfo.linkCorp}}</p>
+        <p class="text-info-page">Toll Free Customer Service phone: +1 {{config.corpInfo.phoneCorp}}</p>
+        <p class="text-info-page">All charges on your bank statement will read: {{config.corpInfo.brandName}}</p>
         <h3 class="sub-label-info-page">PRICING TERMS</h3>
-        <p class="text-info-page">Price may differ based on sales or discounts:
-            - Yogurt Skin Under-Eye Cream
-            - Yogurt Skin Lifting Cream
-            - Yogurt Skin Anti Aging Cream</p>
+        <p class="text-info-page">Price may differ based on sales or discounts: </p>
+            <p v-for="elem in config.items" class="text-info-page">
+            - {{elem.label}} ${{elem.prise}}.00</p>
         <h3 class="sub-label-info-page">SHIPPING TERMS</h3>
         <p class="text-info-page">Products will be shipped to an address designated by you, if applicable, so long as such
-            address is complete and complies with the shipping restrictions contained on Yogurt Skin Cream. All
+            address is complete and complies with the shipping restrictions contained on {{config.corpInfo.brandName}}. All
             transactions are made pursuant to a shipping contract, and, as a result, risk of loss and title for
             Products pass to you upon delivery of the Products to the carrier.
-            Delivery of Products purchased from Yogurt Skin Cream to addresses outside the United States is
+            Delivery of Products purchased from {{config.corpInfo.brandName}} to addresses outside the United States is
             prohibited. Estimated delivery times are determined based on the method of shipping chosen when Products
             are purchased and the destination of the Products.</p>
         <p class="text-info-page">All products are shipped via United States Postal Service First Class Mail. Packages will
@@ -44,12 +43,12 @@
         <h3 class="sub-label-info-page">Returns</h3>
         <p class="text-info-page">Returns are accepted for 30 days from the date of delivery per the delivery confirmation. We
             accept unopened merchandise in original condition. Please contact our customer service team for a return
-            authorization number at support@yogurtskincream.com. Once the item is received, a refund will be
+            authorization number at support@{{config.corpInfo.linkCorp}}. Once the item is received, a refund will be
             processed within 3 business days.</p>
         <h3 class="sub-label-info-page">Return Shipping</h3>
         <p class="text-info-page">All returns must be in the original packaging, with an RMA, and shipped to:</p>
-        <p class="text-info-page">AVG Marketing LLC</p>
-        <p class="text-info-page">2515 E Thomas Rd Suite 16-1071 Phoenix, Arizona 85016</p>
+        <p class="text-info-page">{{config.corpInfo.nameCorp}}</p>
+        <p class="text-info-page">{{config.corpInfo.addressCorp}}</p>
         <h3 class="sub-label-info-page">Refunds and Exchanges</h3>
         <p class="text-info-page">Once a return is received and validated, we will advise you via email. If your return is
             accepted, we will issue an exchange, a store credit to be used on the site, or a refund to the original
@@ -293,13 +292,18 @@
         <p class="text-info-page">You hereby represent and warrant that:</p>
         <p class="text-info-page">(1) You are age eighteen (18) or older.</p>
         <p class="text-info-page">(2) You have read this Agreement and thoroughly understand the terms contained.</p>
-        <p class="text-info-page">Email: support@yogurtskincream.com</p>
-        <p class="text-info-page">Toll Free Customer Service phone: +1 833-799-7853</p>
+        <p class="text-info-page">Email: support@{{config.corpInfo.linkCorp}}</p>
+        <p class="text-info-page">Toll Free Customer Service phone: {{config.corpInfo.phoneCorp}}</p>
     </section>
 </template>
 
 <script>
     export default {
-        name: "termsAndConditionsPage"
+        name: "termsAndConditionsPage",
+        data() {
+            return {
+                config: this.$store.state
+            }
+        }
     }
 </script>

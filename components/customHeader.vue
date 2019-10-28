@@ -2,7 +2,7 @@
     <section class="header">
         <b-container>
             <b-row class="justify-content-end header-phone">
-                Customer Service +1 (800) 286-9152
+                Customer Service {{config.phoneCorp}}
             </b-row>
             <b-row align-v="end">
                 <b-col>
@@ -26,7 +26,12 @@
 
     export default {
         name: "customHeader",
-        components: {cartIcon}
+        components: {cartIcon},
+        data() {
+            return {
+                config: this.$store.state.corpInfo
+            }
+        }
     }
 </script>
 

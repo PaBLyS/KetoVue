@@ -10,8 +10,7 @@
                 environmental factors and aging itself.
             </p>
             <p class="text">
-                Use of a quality topical formula may offer the best defense against these signs of aging. <strong>Yogurt
-                Skin Cream</strong> is a facial moisturizer which may help rebuild the vital collagen network in the
+                Use of a quality topical formula may offer the best defense against these signs of aging. <strong>{{config.brandName}}</strong> is a facial moisturizer which may help rebuild the vital collagen network in the
                 dermal matrix, supporting hydration levels. It may also help tighten the skin's appearance and may
                 reduce the appearance of wrinkles and lines.
             </p>
@@ -24,6 +23,7 @@
         name: "about-us",
         data() {
             return {
+                config: this.$store.state.corpInfo,
                 items: [
                     {
                         text: 'Home',

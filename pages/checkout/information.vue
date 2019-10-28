@@ -74,7 +74,6 @@
             <nuxt-link to="/cart" class="button-back">Return to cart</nuxt-link>
             <button @click="goToNext()" :class="['button-next', {'button-disabled': !validate}]">Continue to shipping</button>
         </div>
-        {{validate}}
     </section>
 </template>
 

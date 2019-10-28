@@ -1,10 +1,16 @@
 export const state = () => ({
     corpInfo: {
-        nameCorp: '',
-        addressCorp: '',
-        phoneCorp: '',
-        linkCorp: '',
-        brandName: ''
+        nameCorp: 'AVG Marketing LLC',
+        addressCorp: '2515 E Thomas Rd Suite 16-1071 Phoenix, Arizona 85016',
+        stateCorp: 'SC',
+        phoneCorp: '+1 833-799-7853',
+        linkCorp: 'yogurtskincream.com',
+        brandName: 'Yogurt Skin Cream'
+    },
+    sliderText: {
+        slide1: 'INCREASE HYDRATION',
+        slide2: 'IMPROVE APPEARANCE',
+        slide3: 'REDUCE WRINKLES'
     },
     items: [
         {

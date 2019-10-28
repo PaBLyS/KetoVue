@@ -20,13 +20,13 @@
             </b-container>
         </b-container>
         <b-container class="footer-bottom">
-            <p>© 2019, Yogurt Skin Cream <br>
+            <p>© 2019, {{config.brandName}} <br>
                 FOOD AND DRUG ADMINISTRATION (FDA) DISCLOSURE This product is not for use by or sale to persons under
                 the age of 18. This product should be used only as directed on the label. It should not be used if you
                 are pregnant or nursing. Consult with a physician before use if you have a serious medical condition or
                 use prescription medications. All trademarks and copyrights are the property of their respective owners
                 andare not affiliated with nor do they endorse. These statements have not been evaluated by the FDA.
-                Thisproduct is not intended to diagnose, treat, cure or prevent any disease. Individual results will
+                This product is not intended to diagnose, treat, cure or prevent any disease. Individual results will
                 vary. By using this site you agree to follow the
                 <nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link>
                 and all
@@ -43,7 +43,12 @@
 
 <script>
     export default {
-        name: "customFooter"
+        name: "customFooter",
+        data() {
+            return {
+                config: this.$store.state.corpInfo
+            }
+        }
     }
 </script>
 

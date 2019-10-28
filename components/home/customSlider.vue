@@ -8,17 +8,17 @@
                     @sliding-start="onSlideStart"
                     @sliding-end="onSlideEnd">
             <b-carousel-slide img-src="/slider/0.jpg">
-                <h2>INCREASE HYDRATION</h2>
+                <h2>{{config.slide1}}</h2>
                 <div class="carousel-caption-line"></div>
                 <nuxt-link to="/catalog">SHOP THE COLLECTION</nuxt-link>
             </b-carousel-slide>
             <b-carousel-slide img-src="/slider/1.jpg">
-                <h2>IMPROVE APPEARANCE</h2>
+                <h2>{{config.slide2}}</h2>
                 <div class="carousel-caption-line"></div>
                 <nuxt-link to="/catalog">SHOP THE COLLECTION</nuxt-link>
             </b-carousel-slide>
             <b-carousel-slide img-src="/slider/2.jpg">
-                <h2>REDUCE WRINKLES</h2>
+                <h2>{{config.slide3}}</h2>
                 <div class="carousel-caption-line"></div>
                 <nuxt-link to="/catalog">SHOP THE COLLECTION</nuxt-link>
             </b-carousel-slide>
@@ -31,6 +31,7 @@
         name: "customSlider",
         data() {
             return {
+                config: this.$store.state.sliderText,
                 slide: 0,
                 sliding: null
             }

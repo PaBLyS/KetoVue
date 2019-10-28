@@ -57,10 +57,10 @@
                         <span>Additional comments</span>
                     </div>
                     <textarea name="" id="" cols="30" rows="10"></textarea>
-                    <p class="order-text">This website is owned, maintained and issued by Smart Logistics, a U.S.
-                        domiciled corporation, incorporated in NC. All communications to Yogurt  Skin Cream through this
-                        site, or any form thereon, are communications to Yogurt Skin Cream in the U.S. All charges on
-                        your bank statement will read: yogurtskincream.com</p>
+                    <p class="order-text">This website is owned, maintained and issued by {{config.nameCorp}}, a U.S.
+                        domiciled corporation, incorporated in {{config.stateCorp}}. All communications to {{config.brandName}} through this
+                        site, or any form thereon, are communications to {{config.brandName}} in the U.S. All charges on
+                        your bank statement will read: {{config.linkCorp}}</p>
                     <p class="check">
                         <input style="display: none" class="check-input" type="checkbox" id="agree"/>
                         <label class="check-label" for="agree">
@@ -91,6 +91,7 @@
         name: "cart",
         data() {
             return {
+                config: this.$store.state.corpInfo,
                 items: [
                     {
                         text: 'Home',

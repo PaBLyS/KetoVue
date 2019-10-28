@@ -2,7 +2,7 @@
     <section class="layout">
         <div class="wrap">
             <div class="left">
-                <nuxt-link to="/" class="left-brand">Yogurt Skin Cream</nuxt-link>
+                <nuxt-link to="/" class="left-brand">{{config.brandName}}</nuxt-link>
                 <b-breadcrumb :items="items"></b-breadcrumb>
                 <nuxt/>
                 <div class="wrap-footer">
@@ -50,6 +50,7 @@
         components: {termsAndConditionsPage, privacyPolicyPage, rightBar},
         data() {
             return {
+                config: this.$store.state.corpInfo,
                 items: [
                     {
                         text: 'Cart',

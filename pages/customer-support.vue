@@ -4,13 +4,13 @@
             <b-breadcrumb :items="items"></b-breadcrumb>
             <h2 class="label">Customer Support</h2>
             <h3 class="sub-label">Corp Address</h3>
-            <p class="text">AVG Marketing LLC</p>
-            <p class="text">2515 E Thomas Rd Suite 16-1071 Phoenix, Arizona 85016</p>
+            <p class="text">{{config.nameCorp}}</p>
+            <p class="text">{{config.addressCorp}}</p>
             <h3 class="sub-label">Return Address</h3>
-            <p class="text">AVG Marketing LLC</p>
-            <p class="text">2515 E Thomas Rd Suite 16-1071 Phoenix, Arizona 85016</p>
-            <p class="text">Phone: +1 833-799-7853</p>
-            <p class="text">Support Email: support@yogurtskincream.com</p>
+            <p class="text">{{config.nameCorp}}</p>
+            <p class="text">{{config.addressCorp}}</p>
+            <p class="text">Phone: {{config.phoneCorp}}</p>
+            <p class="text">Support Email: support@{{config.linkCorp}}</p>
             <p class="text">Support Hours: 24 hours a day, Monday through Sunday. Closed holidays.</p>
         </b-container>
     </section>
@@ -21,6 +21,7 @@
         name: "customer-support",
         data() {
             return {
+                config: this.$store.state.corpInfo,
                 items: [
                     {
                         text: 'Home',
