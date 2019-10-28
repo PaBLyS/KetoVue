@@ -95,7 +95,7 @@
 
 <style scoped>
     .block {
-        background-color: #f7cac9;
+        background-color: var(--main-block);
     }
 
     .img-wrap {

@@ -29,12 +29,12 @@
         color: #232323;
         font-size: 20px;
         font-weight: 700;
-        background-color: #f7cac9;
+        background-color: var(--main-block);
         margin: 0;
         padding: 25px 0;
     }
 
     .prod-list {
-        background: #f7cac9;
+        background: var(--main-block);
     }
 </style>

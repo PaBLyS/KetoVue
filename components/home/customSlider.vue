@@ -63,20 +63,20 @@
 
     .carousel-caption a {
         display: inline-block;
-        color: #fff;
+        color: var(--slider-color);
         width: 270px;
         padding: 10px 25px 8px;
         font-weight: 700;
         font-size: 13px;
         text-decoration: none;
-        background: #232323;
+        background: var(--slider-bg);
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
         transition: all .3s ease-in;
     }
 
     .carousel-caption a:hover {
-        color: #000;
-        background: #fff;
+        color: var(--slider-color-hover);
+        background: var(--slider-bg-hover);
     }
 
     .carousel-caption-line {

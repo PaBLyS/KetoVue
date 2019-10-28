@@ -38,6 +38,7 @@
 <style scoped>
     .header {
         padding: 16px 0;
+        background-color: var(--header);
     }
 
     .header-phone {

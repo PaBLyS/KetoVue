@@ -164,7 +164,7 @@
 
 <style scoped>
     .block {
-        background-color: #f7cac9;
+        background-color: var(--main-block);
         min-height: 400px;
         padding-bottom: 20px;
     }
@@ -433,6 +433,11 @@
         text-transform: uppercase;
         font-size: 13px;
         font-weight: 700;
+        transition: background .3s;
+    }
+    
+    .sub-button:hover{
+        background: #e95144;
     }
 
     .continue {

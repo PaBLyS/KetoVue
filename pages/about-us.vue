@@ -46,7 +46,7 @@
 
 <style scoped>
     .block {
-        background-color: #f7cac9;
+        background-color: var(--main-block);
         min-height: 400px;
         padding-bottom: 20px;
     }

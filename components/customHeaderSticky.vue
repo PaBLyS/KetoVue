@@ -23,7 +23,7 @@
         align-items: center;
         position: sticky;
         top: 0;
-        background: #232323;
+        background: var(--header-sticky);
         z-index: 199;
     }
 

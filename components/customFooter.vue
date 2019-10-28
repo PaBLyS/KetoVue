@@ -54,8 +54,8 @@
 
 <style scoped>
     section {
-        background: #232323;
-        color: #969696;
+        background: var(--footer-bg);
+        color: var(--footer-color);
     }
 
     .footer-top {
@@ -64,7 +64,7 @@
     }
 
     .footer-link {
-        color: #969696;
+        color: var(--footer-color);
         font-size: 12px;
         font-weight: 400;
         line-height: 24px;
@@ -73,7 +73,7 @@
     }
 
     .footer-link:hover {
-        color: #fff;
+        color: var(--footer-link-hover);
     }
 
     .footer-links {
@@ -93,7 +93,7 @@
     }
 
     .footer-bottom a {
-        color: #969696;
+        color: var(--footer-color);
     }
 
     .payment img {
