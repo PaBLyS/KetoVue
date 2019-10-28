@@ -49,9 +49,9 @@
             </li>
             <li class="hover-item last" v-else>
                 <p class="text">Your cart is currently empty.</p>
-                <div class="button button-view">
+                <nuxt-link to="/catalog" class="button button-view">
                     Continue Shopping
-                </div>
+                </nuxt-link>
             </li>
         </ul>
     </section>
