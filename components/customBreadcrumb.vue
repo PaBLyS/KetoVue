@@ -40,7 +40,7 @@
 
     }
     
-    .wrap .line:last-child {
+    .wrap-breadcrumb .line:last-child {
         display: none;
     }
 </style>
