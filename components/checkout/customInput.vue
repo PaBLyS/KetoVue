@@ -59,7 +59,8 @@
                 this.validInput = !/^[a-zA-Z ]+$/.test(this.inputValue)
             } else if (this.nameInput === 'cardCode') {
                 this.validInput = !/^(\d){2,4}$/.test(this.inputValue)
-            } else return false
+            } else this.validInput = false;
+            this.$emit('update:validate', !this.validInput)
         }
     }
 </script>

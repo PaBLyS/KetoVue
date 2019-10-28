@@ -5,7 +5,8 @@
             <custom-input nameInput="email"
                           type="email"
                           placeholderInput="Email or mobile phone number"
-                          invalidText="Enter a valid email or a mobile phone number"/>
+                          invalidText="Enter a valid email or a mobile phone number"
+                          :validate.sync="validate"/>
             <custom-checkbox nameCheckbox="news"
                              textCheckbox="Keep me up to date on news and exclusive offers"/>
         </div>
@@ -21,26 +22,30 @@
                 <custom-input nameInput="lastName"
                               type="text"
                               placeholderInput="Last name"
-                              invalidText="Enter a last name"/>
+                              invalidText="Enter a last name"
+                              :validate.sync="validate"/>
             </div>
         </div>
         <div class="wrap-input-full">
             <custom-input nameInput="address"
                           type="text"
                           placeholderInput="Address"
-                          invalidText="Enter an address"/>
+                          invalidText="Enter an address"
+                          :validate.sync="validate"/>
         </div>
         <div class="wrap-input-full">
             <custom-input nameInput="address2"
                           type="text"
                           placeholderInput="Apartment, suite, etc. (optional)"
-                          invalidText="Enter an address"/>
+                          invalidText="Enter an address"
+                          :validate.sync="validate"/>
         </div>
         <div class="wrap-input-full">
             <custom-input nameInput="city"
                           type="text"
                           placeholderInput="City"
-                          invalidText="Enter a city"/>
+                          invalidText="Enter a city"
+                          :validate.sync="validate"/>
         </div>
         <div style="display:flex">
             <div class="wrap-input">
@@ -57,7 +62,8 @@
                 <custom-input nameInput="zipCode"
                               type="text"
                               placeholderInput="ZIP code"
-                              invalidText="Enter a ZIP / postal code"/>
+                              invalidText="Enter a ZIP / postal code"
+                              :validate.sync="validate"/>
             </div>
         </div>
         <div class="wrap-input">
@@ -66,8 +72,9 @@
         </div>
         <div class="wrap-button">
             <nuxt-link to="/cart" class="button-back">Return to cart</nuxt-link>
-            <nuxt-link to="/checkout/shipping" class="button-next">Continue to shipping</nuxt-link>
+            <button @click="goToNext()" :class="['button-next', {'button-disabled': !validate}]">Continue to shipping</button>
         </div>
+        {{validate}}
     </section>
 </template>
 
@@ -89,7 +96,13 @@
                     'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York',
                     'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
                     'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington',
-                    'West Virginia', 'Wisconsin', 'Wyoming']
+                    'West Virginia', 'Wisconsin', 'Wyoming'],
+                validate: false
+            }
+        },
+        methods: {
+            goToNext() {
+                if (this.validate) this.$router.push({path: '/checkout/shipping'});
             }
         }
     }

@@ -52,13 +52,15 @@
                     <custom-input nameInput="cardNumber"
                                   type="text"
                                   placeholderInput="Cart number"
-                                  invalidText="Enter a valid card number"/>
+                                  invalidText="Enter a valid card number"
+                                  :validate.sync="validate"/>
                 </div>
                 <div class="wrap-input-full">
                     <custom-input nameInput="cardName"
                                   type="text"
                                   placeholderInput="Name on card"
-                                  invalidText="Enter your name exactly as it’s written on your card"/>
+                                  invalidText="Enter your name exactly as it’s written on your card"
+                                  :validate.sync="validate"/>
                 </div>
                 <div style="display:flex">
                     <div class="wrap-input">
@@ -71,7 +73,8 @@
                         <custom-input nameInput="cardCode"
                                       type="text"
                                       placeholderInput="Security code"
-                                      invalidText="Enter the CVV or security code on your card"/>
+                                      invalidText="Enter the CVV or security code on your card"
+                                      :validate.sync="validate"/>
                     </div>
                 </div>
             </div>
@@ -87,8 +90,8 @@
             </div>
         </div>
         <div class="wrap-button">
-            <nuxt-link to="/checkout/information" class="button-back">Return to shipping</nuxt-link>
-            <nuxt-link to="/checkout/payment" class="button-next">Pay now</nuxt-link>
+            <nuxt-link to="/checkout/shipping" class="button-back">Return to shipping</nuxt-link>
+            <button @click="goToNext()" :class="['button-next', {'button-disabled': !validate}]">Pay now</button>
         </div>
     </section>
 </template>
@@ -103,7 +106,13 @@
         components: {customInput, customInputData},
         data() {
             return {
-                info: this.$store.state.shipping
+                info: this.$store.state.shipping,
+                validate: false
+            }
+        },
+        methods: {
+            goToNext() {
+                if (this.validate) this.$router.push({path: '/checkout/payment'});
             }
         }
     }

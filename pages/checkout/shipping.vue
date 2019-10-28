@@ -33,7 +33,7 @@
         </div>
         <div class="wrap-button">
             <nuxt-link to="/checkout/information" class="button-back">Return to information</nuxt-link>
-            <nuxt-link to="/checkout/payment" class="button-next">Continue to payment</nuxt-link>
+            <button @click="goToNext()" :class="['button-next', {'button-disabled': !validate}]">Continue to payment</button>
         </div>
     </section>
 </template>
@@ -45,7 +45,13 @@
         name: "shipping",
         data() {
             return {
-                info: this.$store.state.shipping
+                info: this.$store.state.shipping,
+                validate: true
+            }
+        },
+        methods: {
+            goToNext() {
+                if (this.validate) this.$router.push({path: '/checkout/payment'});
             }
         }
     }
