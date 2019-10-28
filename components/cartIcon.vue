@@ -49,9 +49,11 @@
             </li>
             <li class="hover-item last" v-else>
                 <p class="text">Your cart is currently empty.</p>
-                <nuxt-link to="/catalog" class="button button-view">
-                    Continue Shopping
-                </nuxt-link>
+                <div class="button-wrap">
+                    <nuxt-link to="/catalog" class="button button-view">
+                        Continue Shopping
+                    </nuxt-link>
+                </div>
             </li>
         </ul>
     </section>
@@ -230,7 +232,7 @@
         transition: all .2s ease-in;
         cursor: pointer;
     }
-    
+
     .button:hover{
         text-decoration: none;
     }
