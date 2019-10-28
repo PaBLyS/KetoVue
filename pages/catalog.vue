@@ -1,7 +1,7 @@
 <template>
     <section class="block">
         <b-container>
-            <b-breadcrumb :items="items"></b-breadcrumb>
+            <custom-breadcrumb :items="items"></custom-breadcrumb>
             <h2 class="label">Products</h2>
         </b-container>
         <product-list/>
@@ -10,11 +10,12 @@
 
 <script>
     import productList from "../components/home/productList";
+    import customBreadcrumb from "../components/customBreadcrumb";
 
     export default {
         name: "catalog",
         components: {
-            productList
+            productList, customBreadcrumb
         },
         data() {
             return {
@@ -36,18 +37,6 @@
 <style scoped>
     .block {
         background-color: #f7cac9;
-    }
-
-    .breadcrumb {
-        background: transparent;
-        padding-left: 0;
-    }
-
-    .breadcrumb a,
-    .breadcrumb span {
-        font-size: 12px;
-        color: #232323;
-        text-decoration: none;
     }
 
     .label {

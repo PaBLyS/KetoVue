@@ -2,7 +2,7 @@
     <section class="block">
         <b-container>
             <b-row>
-                <b-breadcrumb :items="itemsProd"></b-breadcrumb>
+                <custom-breadcrumb :items="itemsProd"></custom-breadcrumb>
             </b-row>
             <b-row class="content">
                 <b-col cols="6">
@@ -44,8 +44,11 @@
 </template>
 
 <script>
+    import customBreadcrumb from "../components/customBreadcrumb";
+
     export default {
         name: "products",
+        components: {customBreadcrumb},
         data() {
             return {
                 itemsProd: [
@@ -93,18 +96,6 @@
 <style scoped>
     .block {
         background-color: #f7cac9;
-    }
-
-    .breadcrumb {
-        background: transparent;
-        padding-left: 0;
-    }
-
-    .breadcrumb a,
-    .breadcrumb span {
-        font-size: 12px;
-        color: #232323;
-        text-decoration: none;
     }
 
     .img-wrap {

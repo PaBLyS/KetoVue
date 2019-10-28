@@ -74,18 +74,6 @@ a:focus{
     width: 100%;
 }
 
-.breadcrumb-item + .breadcrumb-item::before{
-    content: '';
-    right: 0;
-    top: 0;
-    height: 9px;
-    width: 8px;
-    border-top: 1px solid #232323;
-    border-right: 1px solid #232323;
-    transform: rotate(45deg);
-    margin-right: 8px;
-}
-
 .wrap-button {
     display: flex;
     align-items: center;

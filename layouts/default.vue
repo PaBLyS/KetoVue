@@ -22,6 +22,6 @@
 
 <style>
     .default {
-        font-family: Poppins, "Arial", "sans-serif";
+        font-family: Poppins, "sans-serif";
     }
 </style>

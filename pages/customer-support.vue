@@ -1,7 +1,7 @@
 <template>
     <section class="block">
         <b-container>
-            <b-breadcrumb :items="items"></b-breadcrumb>
+            <custom-breadcrumb :items="items"></custom-breadcrumb>
             <h2 class="label">Customer Support</h2>
             <h3 class="sub-label">Corp Address</h3>
             <p class="text">{{config.nameCorp}}</p>
@@ -17,8 +17,11 @@
 </template>
 
 <script>
+    import customBreadcrumb from "../components/customBreadcrumb";
+
     export default {
         name: "customer-support",
+        components: {customBreadcrumb},
         data() {
             return {
                 config: this.$store.state.corpInfo,
@@ -44,18 +47,6 @@
         background-color: #f7cac9;
         min-height: 400px;
         padding-bottom: 20px;
-    }
-
-    .breadcrumb {
-        background: transparent;
-        padding-left: 0;
-    }
-
-    .breadcrumb a,
-    .breadcrumb span {
-        font-size: 12px;
-        color: #232323;
-        text-decoration: none;
     }
 
     .label {

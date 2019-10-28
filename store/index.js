@@ -4,8 +4,8 @@ export const state = () => ({
         addressCorp: '2515 E Thomas Rd Suite 16-1071 Phoenix, Arizona 85016',
         stateCorp: 'SC',
         phoneCorp: '+1 833-799-7853',
-        linkCorp: 'yogurtskincream.com',
-        brandName: 'Yogurt Skin Cream'
+        linkCorp: 'yogurtskincreamplus.com',
+        brandName: 'Yogurt Skin Cream Plus'
     },
     sliderText: {
         slide1: 'INCREASE HYDRATION',

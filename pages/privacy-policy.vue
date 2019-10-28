@@ -1,7 +1,7 @@
 <template>
     <section class="block-info-page">
         <b-container>
-            <b-breadcrumb :items="items"></b-breadcrumb>
+            <custom-breadcrumb :items="items"></custom-breadcrumb>
             <privacy-policy-page />
         </b-container>
     </section>
@@ -9,9 +9,10 @@
 
 <script>
     import privacyPolicyPage from "../components/info/privacyPolicyPage";
+    import customBreadcrumb from "../components/customBreadcrumb";
 
     export default {
-        components: {privacyPolicyPage},
+        components: {privacyPolicyPage, customBreadcrumb},
         name: "privacy-policy",
         data() {
             return {
@@ -37,18 +38,6 @@
         background-color: #f7cac9;
         min-height: 400px;
         padding-bottom: 20px;
-    }
-
-    .breadcrumb {
-        background: transparent;
-        padding-left: 0;
-    }
-
-    .breadcrumb a,
-    .breadcrumb span {
-        font-size: 12px;
-        color: #232323;
-        text-decoration: none;
     }
 
     .label-info-page {

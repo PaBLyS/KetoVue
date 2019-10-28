@@ -3,7 +3,7 @@
         <div class="wrap">
             <div class="left">
                 <nuxt-link to="/" class="left-brand">{{config.brandName}}</nuxt-link>
-                <b-breadcrumb :items="items"></b-breadcrumb>
+                <custom-breadcrumb :items="items"></custom-breadcrumb>
                 <nuxt/>
                 <div class="wrap-footer">
                     <div class="btn-wrap">
@@ -45,9 +45,10 @@
     import termsAndConditionsPage from "../components/info/termsAndConditionsPage";
     import privacyPolicyPage from "../components/info/privacyPolicyPage";
     import rightBar from "../components/checkout/rightBar";
+    import customBreadcrumb from "../components/customBreadcrumb";
 
     export default {
-        components: {termsAndConditionsPage, privacyPolicyPage, rightBar},
+        components: {termsAndConditionsPage, privacyPolicyPage, rightBar, customBreadcrumb},
         data() {
             return {
                 config: this.$store.state.corpInfo,
@@ -83,18 +84,6 @@
 <style scoped>
     .layout {
         font-family: 'SegoeUIRegular', sans-serif;
-    }
-
-    .breadcrumb {
-        background: transparent;
-        padding-left: 0;
-    }
-
-    .breadcrumb a,
-    .breadcrumb span {
-        font-size: 12px;
-        color: #232323;
-        text-decoration: none;
     }
 
     .layout {

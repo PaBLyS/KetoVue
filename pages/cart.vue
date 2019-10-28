@@ -2,7 +2,7 @@
     <section class="block">
         <b-container>
             <b-row>
-                <b-breadcrumb :items="items"></b-breadcrumb>
+                <custom-breadcrumb :items="items"></custom-breadcrumb>
             </b-row>
             <b-row class="cart-header">
                 <h2 class="label">my cart</h2>
@@ -87,8 +87,11 @@
 </template>
 
 <script>
+    import customBreadcrumb from "../components/customBreadcrumb";
+
     export default {
         name: "cart",
+        components: {customBreadcrumb},
         data() {
             return {
                 config: this.$store.state.corpInfo,
@@ -164,18 +167,6 @@
         background-color: #f7cac9;
         min-height: 400px;
         padding-bottom: 20px;
-    }
-
-    .breadcrumb {
-        background: transparent;
-        padding-left: 0;
-    }
-
-    .breadcrumb a,
-    .breadcrumb span {
-        font-size: 12px;
-        color: #232323;
-        text-decoration: none;
     }
 
     .label {

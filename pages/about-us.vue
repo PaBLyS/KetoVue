@@ -1,7 +1,7 @@
 <template>
     <section class="block">
         <b-container>
-            <b-breadcrumb :items="items"></b-breadcrumb>
+            <custom-breadcrumb :items="items"></custom-breadcrumb>
             <h2 class="label">About Us</h2>
             <p class="text">
                 Dryness, wrinkles, age spots are common skin care concerns that riddle most women as they begin to age.
@@ -19,8 +19,11 @@
 </template>
 
 <script>
+    import customBreadcrumb from "../components/customBreadcrumb";
+
     export default {
         name: "about-us",
+        components: {customBreadcrumb},
         data() {
             return {
                 config: this.$store.state.corpInfo,
@@ -46,18 +49,6 @@
         background-color: #f7cac9;
         min-height: 400px;
         padding-bottom: 20px;
-    }
-
-    .breadcrumb {
-        background: transparent;
-        padding-left: 0;
-    }
-
-    .breadcrumb a,
-    .breadcrumb span {
-        font-size: 12px;
-        color: #232323;
-        text-decoration: none;
     }
 
     .label {

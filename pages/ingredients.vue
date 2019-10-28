@@ -1,7 +1,7 @@
 <template>
     <section class="block">
         <b-container>
-            <b-breadcrumb :items="items"></b-breadcrumb>
+            <custom-breadcrumb :items="items"></custom-breadcrumb>
             <h2 class="label">Ingredients</h2>
             <div v-for="(item, index) in itemsIngredient"
                  :key="index"
@@ -27,8 +27,11 @@
 </template>
 
 <script>
+    import customBreadcrumb from "../components/customBreadcrumb";
+
     export default {
         name: "ingredients",
+        components: {customBreadcrumb},
         data() {
             return {
                 items: [
@@ -56,18 +59,6 @@
         background-color: #f7cac9;
         min-height: 400px;
         padding-bottom: 20px;
-    }
-
-    .breadcrumb {
-        background: transparent;
-        padding-left: 0;
-    }
-
-    .breadcrumb a,
-    .breadcrumb span {
-        font-size: 12px;
-        color: #232323;
-        text-decoration: none;
     }
 
     .label {
