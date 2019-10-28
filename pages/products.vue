@@ -16,8 +16,8 @@
                         <img :class="{ active: activeImg == 2}"
                              @click="editImg(2)"
                              :src="'/items/' + itemId + '/2.png'">
-                        <img :class="{ active: activeImg == 3 }"
-                             :src="'/items/' + itemId + '/3.png'">
+<!--                        <img :class="{ active: activeImg == 3 }"-->
+<!--                             :src="'/items/' + itemId + '/3.png'">-->
                     </div>
                 </b-col>
                 <b-col cols="6">
@@ -200,7 +200,7 @@
     .img-all {
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         flex-wrap: wrap;
         margin: 40px 0;
     }
@@ -208,7 +208,7 @@
     .img-all img {
         height: auto;
         width: 100px;
-        margin: 0 10px;
+        margin: 0 25px;
     }
 
     .active {
